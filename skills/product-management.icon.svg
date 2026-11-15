@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#10b981" fill-opacity="0.14"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" stroke="#10b981" stroke-opacity="0.35" stroke-width="3"/>
+  <text x="32" y="40" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="23" font-weight="700" fill="#10b981">PM</text>
+  <rect x="44" y="8" width="12" height="12" rx="4" fill="#10b981" fill-opacity="0.22" stroke="#10b981" stroke-opacity="0.5" stroke-width="1.5"/>
+  <path d="M47 14h6M50 11v6" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

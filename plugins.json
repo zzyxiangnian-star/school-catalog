@@ -1,5 +1,333 @@
 {
   "schemaVersion": 1,
   "catalogVersion": "v1",
-  "plugins": []
+  "plugins": [
+    {
+      "slug": "context7",
+      "name": "Context7",
+      "tagline": "实时开源库文档检索",
+      "description": "实时拉取各主流开源库与框架的最新官方 API 文档和代码示例，避免模型幻觉。",
+      "category": "research",
+      "creatorName": "Upstash",
+      "repository": "https://github.com/upstash/context7",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-context7-mcp",
+          "name": "Context7",
+          "description": "免 Key 直连的实时文档检索 MCP。",
+          "server": {
+            "name": "context7",
+            "transport": "http",
+            "url": "https://mcp.context7.com/mcp"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "playwright",
+      "name": "Playwright",
+      "tagline": "微软官方浏览器自动化",
+      "description": "基于微软 Playwright 的浏览器自动化 MCP，支持网页访问、截图、表单操作与页面结构提取。",
+      "category": "automation",
+      "creatorName": "Microsoft",
+      "repository": "https://github.com/microsoft/playwright-mcp",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-playwright-mcp",
+          "name": "Playwright",
+          "description": "通过 npx 启动微软官方 Playwright MCP。",
+          "server": {
+            "name": "playwright",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "@playwright/mcp@latest"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "github",
+      "name": "GitHub",
+      "tagline": "GitHub 官方 MCP 服务",
+      "description": "官方 GitHub MCP，支持仓库检索、Issue/PR 管理、代码读取与工作流查询。",
+      "category": "coding",
+      "creatorName": "GitHub",
+      "repository": "https://github.com/github/github-mcp-server",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-github-mcp",
+          "name": "GitHub",
+          "description": "GitHub 远程 MCP 服务（需配置个人 Token）。",
+          "server": {
+            "name": "github",
+            "transport": "http",
+            "url": "https://api.githubcopilot.com/mcp/",
+            "auth": [
+              {
+                "id": "github-pat",
+                "kind": "bearer",
+                "label": "GitHub Personal Access Token"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "chrome-devtools",
+      "name": "Chrome DevTools",
+      "tagline": "Chrome 开发者工具调试",
+      "description": "官方 Chrome DevTools MCP，支持连接浏览器进行 DOM 检查、控制台日志分析与性能排查。",
+      "category": "coding",
+      "creatorName": "Chrome",
+      "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-chrome-devtools-mcp",
+          "name": "Chrome DevTools",
+          "description": "通过 npx 启动 Chrome DevTools MCP。",
+          "server": {
+            "name": "chrome-devtools",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "chrome-devtools-mcp@latest"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "filesystem",
+      "name": "Filesystem",
+      "tagline": "本地文件系统安全读写",
+      "description": "MCP 官方参考实现，提供受控目录内的文件读写、搜索与目录遍历能力。",
+      "category": "productivity",
+      "creatorName": "Model Context Protocol",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-filesystem-mcp",
+          "name": "Filesystem",
+          "description": "本地受控目录文件访问 MCP。",
+          "server": {
+            "name": "filesystem",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-filesystem",
+              "."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "memory",
+      "name": "Memory",
+      "tagline": "知识图谱长期记忆",
+      "description": "MCP 官方记忆服务，基于本地知识图谱持久化实体与关系，实现跨会话记忆。",
+      "category": "productivity",
+      "creatorName": "Model Context Protocol",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-memory-mcp",
+          "name": "Memory",
+          "description": "基于知识图谱的本地持久化记忆 MCP。",
+          "server": {
+            "name": "memory",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-memory"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sequential-thinking",
+      "name": "Sequential Thinking",
+      "tagline": "结构化分步推理",
+      "description": "MCP 官方推理增强工具，帮助智能体在复杂问题中拆解步骤、回溯假设与验证结论。",
+      "category": "research",
+      "creatorName": "Model Context Protocol",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-sequential-thinking-mcp",
+          "name": "Sequential Thinking",
+          "description": "结构化分步思考 MCP。",
+          "server": {
+            "name": "sequential-thinking",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "@modelcontextprotocol/server-sequential-thinking"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fetch",
+      "name": "Fetch",
+      "tagline": "网页抓取与 Markdown 转换",
+      "description": "MCP 官方网页抓取工具，将网页正文高效提取并转换为适合大模型阅读的 Markdown。",
+      "category": "research",
+      "creatorName": "Model Context Protocol",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-fetch-mcp",
+          "name": "Fetch",
+          "description": "通过 uvx 运行官方网页抓取 MCP。",
+          "server": {
+            "name": "fetch",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "mcp-server-fetch"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "git",
+      "name": "Git",
+      "tagline": "Git 仓库读取与操作",
+      "description": "MCP 官方 Git 工具，支持状态查看、提交历史检索、分支对比与变更分析。",
+      "category": "coding",
+      "creatorName": "Model Context Protocol",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-git-mcp",
+          "name": "Git",
+          "description": "通过 uvx 运行官方 Git MCP。",
+          "server": {
+            "name": "git",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "mcp-server-git"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "figma-context",
+      "name": "Figma Context",
+      "tagline": "Figma 设计稿布局解析",
+      "description": "GitHub 高星开源 Figma MCP，提取设计稿层级、样式与组件结构辅助前端还原。",
+      "category": "design",
+      "creatorName": "GLips",
+      "repository": "https://github.com/GLips/Figma-Context-MCP",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-figma-context-mcp",
+          "name": "Figma Context",
+          "description": "解析 Figma 设计稿上下文（需配置 FIGMA_API_KEY）。",
+          "server": {
+            "name": "figma-context",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "figma-developer-mcp",
+              "--stdio"
+            ],
+            "auth": [
+              {
+                "id": "figma-api-key",
+                "kind": "env",
+                "envVar": "FIGMA_API_KEY",
+                "label": "Figma API Key"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "n8n-mcp",
+      "name": "n8n",
+      "tagline": "n8n 工作流调试与构建",
+      "description": "高星开源 n8n MCP，让智能体直接查询节点文档、校验、调试并构建 n8n 自动化工作流。",
+      "category": "automation",
+      "creatorName": "czlonkowski",
+      "repository": "https://github.com/czlonkowski/n8n-mcp",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-n8n-mcp",
+          "name": "n8n",
+          "description": "通过 npx 启动 n8n MCP。",
+          "server": {
+            "name": "n8n-mcp",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "n8n-mcp"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "firecrawl",
+      "name": "Firecrawl",
+      "tagline": "全站爬取与结构化抽取",
+      "description": "支持动态网页渲染、整站爬取及结构化数据抽取的开源抓取 MCP。",
+      "category": "research",
+      "creatorName": "Mendable",
+      "repository": "https://github.com/mendableai/firecrawl-mcp-server",
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-firecrawl-mcp",
+          "name": "Firecrawl",
+          "description": "网页爬虫与结构化提取（需配置 FIRECRAWL_API_KEY）。",
+          "server": {
+            "name": "firecrawl",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "firecrawl-mcp"
+            ],
+            "auth": [
+              {
+                "id": "firecrawl-api-key",
+                "kind": "env",
+                "envVar": "FIRECRAWL_API_KEY",
+                "label": "Firecrawl API Key"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

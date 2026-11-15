@@ -4,11 +4,11 @@ Remote marketplace catalog for **school** (Bots, Skills, Skill Packs, and MCP Pl
 
 ## Summary
 
-- **Skill Catalog Entries (`catalog.json`)**: 69 total
+- **Skill Catalog Entries (`catalog.json`)**: 109 total
   - **Skill Packs**: 24 packs (269 embedded child skills)
-  - **Standalone Skills**: 45 skills
+  - **Standalone & Curated Bot Skills**: 85 skills (45 GitHub standalone + 40 Chinese-localized Bot dependency skills by `sean`)
 - **MCP Plugins (`plugins.json`)**: 60 plugins (29 HTTP, 31 stdio)
-- **Built-in Bots (`agents.json`)**: 0 entries
+- **Built-in Bots (`agents.json`)**: 27 Chinese-localized Bot templates (`creatorName: "sean"`)
 
 ## Structure
 

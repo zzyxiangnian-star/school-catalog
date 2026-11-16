@@ -1921,6 +1921,491 @@
           }
         }
       ]
+    },
+    {
+      "slug": "tencent-docs",
+      "name": "腾讯文档",
+      "tagline": "读写腾讯文档、智能表格与空间文件",
+      "description": "连接腾讯文档官方远程 MCP 服务，支持检索、创建、读写与导出腾讯文档、智能表格及云空间权限管理。需前往 MCP 授权页登录获取个人 Token。",
+      "category": "documents",
+      "creatorName": "Tencent",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%230052d9%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E6%A1%A3%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "websiteUrl": "https://docs.qq.com",
+      "privacyPolicyUrl": "https://developer.cloud.tencent.com/mcp/server/11803",
+      "termsUrl": "https://docs.qq.com/open/auth/mcp.html",
+      "featured": true,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-docs-search",
+          "text": "在我的腾讯文档中搜索最近修改的项目方案并总结要点。"
+        },
+        {
+          "id": "prompt-docs-create",
+          "text": "新建一篇腾讯文档，把今天的会议纪要整理进去。"
+        },
+        {
+          "id": "prompt-docs-sheet",
+          "text": "读取指定的腾讯智能表格并汇总各任务负责人与状态。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-tencent-docs-mcp",
+          "name": "腾讯文档",
+          "description": "腾讯文档官方远程 MCP 服务（需填写个人授权 Token）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%230052d9%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E6%A1%A3%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "tencent-docs",
+            "transport": "http",
+            "url": "https://docs.qq.com/openapi/mcp",
+            "auth": [
+              {
+                "id": "tencent-docs-token",
+                "kind": "key",
+                "label": "个人令牌",
+                "fields": [
+                  {
+                    "id": "token",
+                    "label": "腾讯文档 MCP Token",
+                    "header": "Authorization",
+                    "hint": "打开 https://docs.qq.com/open/auth/mcp.html 登录授权，复制页面上的 Token 并直接粘贴（无需加 Bearer 前缀）"
+                  }
+                ],
+                "docsUrl": "https://docs.qq.com/open/auth/mcp.html",
+                "docsLabel": "获取 Token"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "tencent-meeting",
+      "name": "腾讯会议",
+      "tagline": "会议管理、查询、录制与智能纪要",
+      "description": "连接腾讯会议官方远程 MCP 服务，支持查询会议日程、管理会议信息及获取会议录制与智能纪要。需前往授权页登录获取个人 Token。",
+      "category": "productivity",
+      "creatorName": "Tencent",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%23006eff%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E4%BC%9A%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "websiteUrl": "https://meeting.tencent.com",
+      "privacyPolicyUrl": "https://meeting.tencent.com/ai-skill.html",
+      "termsUrl": "https://meeting.tencent.com/ai-skill.html",
+      "featured": false,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-meeting-list",
+          "text": "列出我今天和明天的腾讯会议安排。"
+        },
+        {
+          "id": "prompt-meeting-summary",
+          "text": "获取最近一次腾讯会议的录制与智能纪要。"
+        },
+        {
+          "id": "prompt-meeting-create",
+          "text": "预约明天上午 10 点的项目同步腾讯会议。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-tencent-meeting-mcp",
+          "name": "腾讯会议",
+          "description": "腾讯会议官方远程 MCP 服务（需填写 X-Tencent-Meeting-Token）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%23006eff%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E4%BC%9A%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "tencent-meeting",
+            "transport": "http",
+            "url": "https://mcp.meeting.tencent.com/mcp/wemeet-open/v1",
+            "auth": [
+              {
+                "id": "tencent-meeting-token",
+                "kind": "key",
+                "label": "个人令牌",
+                "fields": [
+                  {
+                    "id": "token",
+                    "label": "腾讯会议 Token",
+                    "header": "X-Tencent-Meeting-Token",
+                    "hint": "打开 https://meeting.tencent.com/ai-skill.html 登录腾讯会议，复制 Token 并粘贴到此处"
+                  }
+                ],
+                "docsUrl": "https://meeting.tencent.com/ai-skill.html",
+                "docsLabel": "获取 Token"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "tencent-weiyun",
+      "name": "腾讯微云",
+      "tagline": "网盘列表、上传、下载与分享管理",
+      "description": "连接腾讯微云官方远程 MCP 服务，支持网盘文件与目录检索、创建或移动目录、上传下载以及生成分享链接。",
+      "category": "productivity",
+      "creatorName": "Tencent",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%2300a4ff%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E4%BA%91%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "websiteUrl": "https://www.weiyun.com",
+      "privacyPolicyUrl": "https://www.weiyun.com/act/openclaw",
+      "termsUrl": "https://www.weiyun.com/act/openclaw",
+      "featured": false,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-weiyun-list",
+          "text": "列出我微云网盘根目录下的最近文件。"
+        },
+        {
+          "id": "prompt-weiyun-share",
+          "text": "在微云中找到指定文件并生成分享链接。"
+        },
+        {
+          "id": "prompt-weiyun-organize",
+          "text": "按文件类型分类查看我的微云网盘文档。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-tencent-weiyun-mcp",
+          "name": "腾讯微云",
+          "description": "腾讯微云官方远程 MCP 服务（需填写微云 MCP Token）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%2300a4ff%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E4%BA%91%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "tencent-weiyun",
+            "transport": "http",
+            "url": "https://www.weiyun.com/api/v3/mcpserver",
+            "auth": [
+              {
+                "id": "tencent-weiyun-token",
+                "kind": "key",
+                "label": "MCP Token",
+                "fields": [
+                  {
+                    "id": "token",
+                    "label": "微云 MCP Token",
+                    "header": "WyHeader",
+                    "prefix": "mcp_token=",
+                    "hint": "打开 https://www.weiyun.com/act/openclaw 登录获取；请仅粘贴纯 Token 值，勿带 mcp_token=、WEIYUN_MCP_TOKEN= 或首尾引号（系统会自动拼接 mcp_token=）"
+                  }
+                ],
+                "docsUrl": "https://www.weiyun.com/act/openclaw",
+                "docsLabel": "获取 Token"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "tencent-lexiang",
+      "name": "腾讯乐享",
+      "tagline": "知识库检索、阅读、创建与文档管理",
+      "description": "连接腾讯乐享官方远程 MCP 服务，支持企业知识库搜索、阅读、创建与文档管理。需填写在乐享凭证页获取的访问令牌。",
+      "category": "productivity",
+      "creatorName": "Tencent",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%2300c1de%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E4%BA%AB%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "websiteUrl": "https://lexiangla.com",
+      "privacyPolicyUrl": "https://qclaw.qq.com/docs/211858629271314432",
+      "termsUrl": "https://lexiangla.com/mcp",
+      "featured": false,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-lexiang-search",
+          "text": "在腾讯乐享知识库中搜索入职与报销规范。"
+        },
+        {
+          "id": "prompt-lexiang-doc",
+          "text": "读取这篇乐享知识库文档并提炼操作步骤。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-tencent-lexiang-mcp",
+          "name": "腾讯乐享",
+          "description": "腾讯乐享官方远程 MCP 服务（需填写访问令牌 Access Token）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%2300c1de%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E4%BA%AB%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "tencent-lexiang",
+            "transport": "http",
+            "url": "https://mcp.lexiang-app.com/mcp?preset=meta",
+            "auth": [
+              {
+                "id": "tencent-lexiang-token",
+                "kind": "key",
+                "label": "访问令牌",
+                "fields": [
+                  {
+                    "id": "token",
+                    "label": "乐享 Access Token",
+                    "header": "Authorization",
+                    "prefix": "Bearer ",
+                    "hint": "打开 https://lexiangla.com/ai/claw 登录获取访问令牌并粘贴到此处（当前不支持自动附加 company_from 查询参数）"
+                  }
+                ],
+                "docsUrl": "https://qclaw.qq.com/docs/211858629271314432",
+                "docsLabel": "查看文档"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "dida365",
+      "name": "滴答清单",
+      "tagline": "官方 MCP：任务、清单、习惯与专注记录",
+      "description": "滴答清单（TickTick / Dida365）官方远程 MCP 服务，支持读写待办任务、管理清单与文件夹、查询习惯与专注记录，支持浏览器 OAuth 一键授权。",
+      "category": "productivity",
+      "creatorName": "Hangzhou Suishouji Network Technology",
+      "iconUrl": "https://cncdn.dida365.com/web/static/img/apple-touch-icon-152x152.png",
+      "websiteUrl": "https://dida365.com",
+      "privacyPolicyUrl": "https://dida365.com/about/privacy",
+      "termsUrl": "https://dida365.com/about/tos",
+      "featured": true,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-dida-today",
+          "text": "看看我今天到期的滴答清单任务有哪些。"
+        },
+        {
+          "id": "prompt-dida-add",
+          "text": "把这些待办事项添加到我的滴答清单收集箱。"
+        },
+        {
+          "id": "prompt-dida-week",
+          "text": "总结我上周完成的滴答清单任务。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-dida365-mcp",
+          "name": "滴答清单",
+          "description": "滴答清单官方远程 MCP 服务（支持浏览器 OAuth 登录）。",
+          "iconUrl": "https://cncdn.dida365.com/web/static/img/apple-touch-icon-152x152.png",
+          "server": {
+            "name": "dida365",
+            "transport": "http",
+            "url": "https://mcp.dida365.com",
+            "auth": [
+              {
+                "id": "dida365-oauth",
+                "kind": "link",
+                "label": "登录授权"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "tencent-ardot",
+      "name": "腾讯设计 Ardot",
+      "tagline": "腾讯设计平台官方 MCP：设计稿与设计系统",
+      "description": "连接腾讯设计平台 Ardot 官方远程 MCP 服务，支持读写设计稿、检索设计系统组件规范与导出设计资产，支持浏览器 OAuth 一键登录。",
+      "category": "design",
+      "creatorName": "Tencent",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%238b5cf6%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EAr%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "websiteUrl": "https://ardot.tencent.com",
+      "privacyPolicyUrl": "https://docs.ardot.tencent.com/ardot-mcp/introduction.html",
+      "termsUrl": "https://docs.ardot.tencent.com/ardot-mcp.html",
+      "featured": false,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-ardot-spec",
+          "text": "读取当前 Ardot 设计稿的标注尺寸、色彩与组件规范。"
+        },
+        {
+          "id": "prompt-ardot-export",
+          "text": "检查 Ardot 项目里的设计系统 Token 与图标导出清单。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-tencent-ardot-mcp",
+          "name": "腾讯设计 Ardot",
+          "description": "腾讯设计 Ardot 官方远程 MCP 服务（支持浏览器 OAuth 登录）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%238b5cf6%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EAr%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "tencent-ardot",
+            "transport": "http",
+            "url": "https://ardot.tencent.com/mcp",
+            "auth": [
+              {
+                "id": "tencent-ardot-oauth",
+                "kind": "link",
+                "label": "登录授权"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "openalex",
+      "name": "OpenAlex",
+      "tagline": "官方 MCP：学术文献、引文与研究实体检索",
+      "description": "连接 OpenAlex 官方远程 MCP 服务，支持检索全球学术论文、引文网络、学者与科研机构实体及引用统计分析，支持浏览器 OAuth 授权。",
+      "category": "research",
+      "creatorName": "OpenAlex",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%231f6feb%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EOA%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "websiteUrl": "https://openalex.org",
+      "privacyPolicyUrl": "https://help.openalex.org/access/connector/",
+      "termsUrl": "https://help.openalex.org/access/connector/",
+      "featured": false,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-openalex-papers",
+          "text": "在 OpenAlex 检索近两年关于 Multi-Agent Systems 引用最高的论文。"
+        },
+        {
+          "id": "prompt-openalex-author",
+          "text": "查询指定学者近五年的发表趋势与合作机构统计。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-openalex-mcp",
+          "name": "OpenAlex",
+          "description": "OpenAlex 官方远程 MCP 服务（支持浏览器 OAuth 登录）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%231f6feb%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EOA%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "openalex",
+            "transport": "http",
+            "url": "https://mcp.openalex.org/mcp",
+            "auth": [
+              {
+                "id": "openalex-oauth",
+                "kind": "link",
+                "label": "登录授权"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "qcc",
+      "name": "企查查",
+      "tagline": "企业工商、风险、知识产权、经营与董监高查询",
+      "description": "连接企查查官方远程 MCP 服务，支持按企业名称检索工商注册、司法经营风险、知识产权、财务经营概况及董监高人员信息，支持浏览器 OAuth 一键登录。",
+      "category": "research",
+      "creatorName": "Qichacha",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%23008cff%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E4%BC%81%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "websiteUrl": "https://agent.qcc.com",
+      "privacyPolicyUrl": "https://agent.qcc.com/guide",
+      "termsUrl": "https://agent.qcc.com/",
+      "featured": true,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-qcc-company",
+          "text": "查询这家公司的基础工商信息、股权结构与主要风险提示。"
+        },
+        {
+          "id": "prompt-qcc-ip",
+          "text": "统计该企业近年的商标、专利与软件著作权登记情况。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-qcc-mcp",
+          "name": "企查查",
+          "description": "企查查官方远程 MCP 服务（支持浏览器 OAuth 登录）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%23008cff%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E4%BC%81%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "qcc",
+            "transport": "http",
+            "url": "https://agent.qcc.com/mcp/company/stream",
+            "auth": [
+              {
+                "id": "qcc-oauth",
+                "kind": "link",
+                "label": "登录授权"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "yuque-mcp",
+      "name": "语雀",
+      "tagline": "官方 MCP：知识库与文档检索、阅读与编辑",
+      "description": "通过语雀官方本地 stdio MCP 服务（npx -y yuque-mcp）连接语雀知识库，支持搜索、阅读和编写知识库文档，需配置语雀个人令牌。",
+      "category": "documents",
+      "creatorName": "Yuque",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%2322ab28%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E9%9B%80%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "websiteUrl": "https://www.yuque.com",
+      "privacyPolicyUrl": "https://www.yuque.com/yuque/yuque-open-api/api",
+      "termsUrl": "https://www.yuque.com/yuque/yuque-open-api/api",
+      "featured": true,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-yuque-search",
+          "text": "在我的语雀知识库里检索架构设计与接口规范文档。"
+        },
+        {
+          "id": "prompt-yuque-write",
+          "text": "读取这篇语雀文档并追加本迭代的变更说明。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-yuque-mcp",
+          "name": "语雀",
+          "description": "通过 npx 启动官方语雀 MCP 服务（stdio）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%2322ab28%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2249%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E%E9%9B%80%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "yuque-mcp",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "yuque-mcp"
+            ],
+            "auth": [
+              {
+                "id": "yuque-personal-token",
+                "kind": "key",
+                "label": "个人令牌",
+                "fields": [
+                  {
+                    "id": "token",
+                    "label": "语雀 Personal Token",
+                    "env": "YUQUE_PERSONAL_TOKEN",
+                    "hint": "前往语雀「个人设置 → Token」或开放平台创建个人令牌并粘贴到此处"
+                  },
+                  {
+                    "id": "base-url",
+                    "label": "语雀 API 地址（可选）",
+                    "env": "YUQUE_BASE_URL",
+                    "placeholder": "https://www.yuque.com/api/v2",
+                    "hint": "官方默认为 https://www.yuque.com/api/v2；企业私有空间可填入自定义地址，留空即使用官方默认地址",
+                    "optional": true
+                  }
+                ],
+                "docsUrl": "https://www.yuque.com/yuque/yuque-open-api/api",
+                "docsLabel": "查看文档"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
     }
   ]
 }

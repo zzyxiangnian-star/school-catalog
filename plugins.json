@@ -2034,6 +2034,12 @@
                 "docsUrl": "https://meeting.tencent.com/ai-skill.html",
                 "docsLabel": "获取 Token"
               }
+            ],
+            "headers": [
+              {
+                "key": "X-Skill-Version",
+                "value": "v1.0.1"
+              }
             ]
           }
         }
@@ -2375,7 +2381,7 @@
             "command": "npx",
             "args": [
               "-y",
-              "yuque-mcp"
+              "yuque-mcp@1.0.0"
             ],
             "auth": [
               {
@@ -2400,6 +2406,294 @@
                 ],
                 "docsUrl": "https://www.yuque.com/yuque/yuque-open-api/api",
                 "docsLabel": "查看文档"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "mail-qq",
+      "name": "QQ 邮箱",
+      "tagline": "QQ 邮箱收信、搜索与发信（IMAP/SMTP）",
+      "description": "通过本地 stdio MCP 服务（npx -y email-smtp-imap-mcp@2.2.2）连接个人 QQ 邮箱，支持查看、搜索、整理邮件以及发送和回复邮件。服务器地址与 SSL 端口已预设，只需填写 QQ 邮箱地址和 16 位授权码。",
+      "category": "productivity",
+      "creatorName": "QQ Mail",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%231d70f5%22%2F%3E%3Cpath%20d%3D%22M18%2027a4%204%200%200%201%204-4h36a4%204%200%200%201%204%204v26a4%204%200%200%201-4%204H22a4%204%200%200%201-4-4V27zm5%201%2017%2013L57%2028%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2269%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EQQ%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "repository": "https://github.com/samihalawa/email-smtp-imap-mcp",
+      "websiteUrl": "https://mail.qq.com",
+      "privacyPolicyUrl": "https://service.mail.qq.com",
+      "termsUrl": "https://service.mail.qq.com",
+      "featured": true,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-mail-qq-recent",
+          "text": "列出我 QQ 邮箱最近收到的 5 封邮件，并总结发件人和主题。"
+        },
+        {
+          "id": "prompt-mail-qq-unread",
+          "text": "搜索我 QQ 邮箱里的未读邮件，按紧急程度帮我整理待办。"
+        },
+        {
+          "id": "prompt-mail-qq-send",
+          "text": "用我的 QQ 邮箱给指定收件人起草并发送一封确认邮件。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-mail-qq-mcp",
+          "name": "QQ 邮箱",
+          "description": "预设 imap.qq.com:993 与 smtp.qq.com:465，只需填写 QQ 邮箱地址与授权码。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%231d70f5%22%2F%3E%3Cpath%20d%3D%22M18%2027a4%204%200%200%201%204-4h36a4%204%200%200%201%204%204v26a4%204%200%200%201-4%204H22a4%204%200%200%201-4-4V27zm5%201%2017%2013L57%2028%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2269%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EQQ%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "mail-qq",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "email-smtp-imap-mcp@2.2.2"
+            ],
+            "env": [
+              {
+                "key": "IMAP_HOST",
+                "value": "imap.qq.com"
+              },
+              {
+                "key": "IMAP_PORT",
+                "value": "993"
+              },
+              {
+                "key": "SMTP_HOST",
+                "value": "smtp.qq.com"
+              },
+              {
+                "key": "SMTP_PORT",
+                "value": "465"
+              }
+            ],
+            "auth": [
+              {
+                "id": "mail-qq-auth",
+                "kind": "key",
+                "label": "邮箱授权码",
+                "fields": [
+                  {
+                    "id": "email",
+                    "label": "QQ 邮箱地址",
+                    "env": "SMTP_USER",
+                    "placeholder": "123456789@qq.com",
+                    "hint": "填写你的完整 QQ 邮箱地址（如 123456789@qq.com 或 @foxmail.com）"
+                  },
+                  {
+                    "id": "auth-code",
+                    "label": "IMAP/SMTP 授权码",
+                    "env": "SMTP_PASS",
+                    "placeholder": "16 位客户端授权码",
+                    "hint": "注意：请填写授权码而非 QQ 登录密码！在网页版 QQ 邮箱「设置 → 账号 → POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务」中开启 IMAP/SMTP 服务即可生成 16 位授权码。"
+                  }
+                ],
+                "docsUrl": "https://service.mail.qq.com",
+                "docsLabel": "授权码开通指引"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "mail-163",
+      "name": "网易 163 邮箱",
+      "tagline": "网易 163 邮箱收信、搜索与发信（IMAP/SMTP）",
+      "description": "通过本地 stdio MCP 服务（npx -y email-smtp-imap-mcp@2.2.2）连接网易 163 邮箱，支持收信检索、已读管理及发送回复邮件。服务器地址与 SSL 端口已预设，只需填写 163 邮箱地址和客户端授权码。",
+      "category": "productivity",
+      "creatorName": "NetEase 163",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%23d9363e%22%2F%3E%3Cpath%20d%3D%22M18%2027a4%204%200%200%201%204-4h36a4%204%200%200%201%204%204v26a4%204%200%200%201-4%204H22a4%204%200%200%201-4-4V27zm5%201%2017%2013L57%2028%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2269%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E163%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "repository": "https://github.com/samihalawa/email-smtp-imap-mcp",
+      "websiteUrl": "https://mail.163.com",
+      "privacyPolicyUrl": "https://help.mail.163.com",
+      "termsUrl": "https://help.mail.163.com",
+      "featured": false,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-mail-163-recent",
+          "text": "列出我网易 163 邮箱最近收到的 5 封邮件，并提取要点。"
+        },
+        {
+          "id": "prompt-mail-163-search",
+          "text": "在我的 163 邮箱中搜索本周包含“账单”或“通知”的邮件。"
+        },
+        {
+          "id": "prompt-mail-163-send",
+          "text": "用我的 163 邮箱给指定联系人的邮件写一封回复。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-mail-163-mcp",
+          "name": "网易 163 邮箱",
+          "description": "预设 imap.163.com:993 与 smtp.163.com:465，只需填写 163 邮箱地址与客户端授权码。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%23d9363e%22%2F%3E%3Cpath%20d%3D%22M18%2027a4%204%200%200%201%204-4h36a4%204%200%200%201%204%204v26a4%204%200%200%201-4%204H22a4%204%200%200%201-4-4V27zm5%201%2017%2013L57%2028%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2269%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3E163%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "mail-163",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "email-smtp-imap-mcp@2.2.2"
+            ],
+            "env": [
+              {
+                "key": "IMAP_HOST",
+                "value": "imap.163.com"
+              },
+              {
+                "key": "IMAP_PORT",
+                "value": "993"
+              },
+              {
+                "key": "SMTP_HOST",
+                "value": "smtp.163.com"
+              },
+              {
+                "key": "SMTP_PORT",
+                "value": "465"
+              }
+            ],
+            "auth": [
+              {
+                "id": "mail-163-auth",
+                "kind": "key",
+                "label": "客户端授权码",
+                "fields": [
+                  {
+                    "id": "email",
+                    "label": "163 邮箱地址",
+                    "env": "SMTP_USER",
+                    "placeholder": "yourname@163.com",
+                    "hint": "填写你的完整网易 163 邮箱地址（如 yourname@163.com）"
+                  },
+                  {
+                    "id": "auth-code",
+                    "label": "客户端授权密码（授权码）",
+                    "env": "SMTP_PASS",
+                    "placeholder": "16 位客户端授权密码",
+                    "hint": "注意：请填写客户端授权码而非邮箱登录密码！在网页版 163 邮箱「设置 → POP3/SMTP/IMAP」开启 IMAP/SMTP 服务并新增授权密码后粘贴到此处。"
+                  }
+                ],
+                "docsUrl": "https://help.mail.163.com",
+                "docsLabel": "授权码开通指引"
+              }
+            ]
+          }
+        }
+      ],
+      "skills": []
+    },
+    {
+      "slug": "mail-imap",
+      "name": "其他邮箱（IMAP/SMTP）",
+      "tagline": "通用 IMAP/SMTP 个人与企业邮箱连接器",
+      "description": "通过本地 stdio MCP 服务（npx -y email-smtp-imap-mcp@2.2.2）连接任意支持标准 IMAP/SMTP 协议的个人、高校或企业邮箱（如 126、阿里邮箱、腾讯企业邮箱、Gmail 等），支持自定义收发服务器地址与端口。",
+      "category": "productivity",
+      "creatorName": "Email MCP",
+      "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%23475569%22%2F%3E%3Cpath%20d%3D%22M18%2027a4%204%200%200%201%204-4h36a4%204%200%200%201%204%204v26a4%204%200%200%201-4%204H22a4%204%200%200%201-4-4V27zm5%201%2017%2013L57%2028%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2269%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EIMAP%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "repository": "https://github.com/samihalawa/email-smtp-imap-mcp",
+      "websiteUrl": "https://github.com/samihalawa/email-smtp-imap-mcp",
+      "privacyPolicyUrl": "https://github.com/samihalawa/email-smtp-imap-mcp#readme",
+      "termsUrl": "https://github.com/samihalawa/email-smtp-imap-mcp#readme",
+      "featured": false,
+      "version": "1.0.0",
+      "prompts": [
+        {
+          "id": "prompt-mail-imap-folders",
+          "text": "查看我邮箱中的所有文件夹，并列出收件箱最近 3 封邮件。"
+        },
+        {
+          "id": "prompt-mail-imap-send",
+          "text": "帮我通过邮箱发送一封正式的会议纪要邮件。"
+        }
+      ],
+      "apps": [
+        {
+          "id": "app-mail-imap-mcp",
+          "name": "其他邮箱（IMAP/SMTP）",
+          "description": "手动填写 IMAP/SMTP 服务器地址、端口、邮箱地址与授权码（默认端口 993/465）。",
+          "iconUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2218%22%20fill%3D%22%23475569%22%2F%3E%3Cpath%20d%3D%22M18%2027a4%204%200%200%201%204-4h36a4%204%200%200%201%204%204v26a4%204%200%200%201-4%204H22a4%204%200%200%201-4-4V27zm5%201%2017%2013L57%2028%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%2269%22%20text-anchor%3D%22middle%22%20font-family%3D%22system-ui%2C-apple-system%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EIMAP%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "server": {
+            "name": "mail-imap",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "email-smtp-imap-mcp@2.2.2"
+            ],
+            "env": [
+              {
+                "key": "IMAP_PORT",
+                "value": "993"
+              },
+              {
+                "key": "SMTP_PORT",
+                "value": "465"
+              }
+            ],
+            "auth": [
+              {
+                "id": "mail-imap-auth",
+                "kind": "key",
+                "label": "IMAP/SMTP 配置",
+                "fields": [
+                  {
+                    "id": "imap-host",
+                    "label": "IMAP 服务器地址",
+                    "env": "IMAP_HOST",
+                    "placeholder": "imap.example.com",
+                    "hint": "填写服务商提供的 IMAP 收信服务器域名（如 imap.126.com、imap.exmail.qq.com）"
+                  },
+                  {
+                    "id": "imap-port",
+                    "label": "IMAP 端口（可选，默认 993）",
+                    "env": "IMAP_PORT",
+                    "placeholder": "993",
+                    "hint": "SSL 加密通常为 993；留空将使用默认 993",
+                    "optional": true
+                  },
+                  {
+                    "id": "smtp-host",
+                    "label": "SMTP 服务器地址",
+                    "env": "SMTP_HOST",
+                    "placeholder": "smtp.example.com",
+                    "hint": "填写服务商提供的 SMTP 发信服务器域名（如 smtp.126.com、smtp.exmail.qq.com）"
+                  },
+                  {
+                    "id": "smtp-port",
+                    "label": "SMTP 端口（可选，默认 465）",
+                    "env": "SMTP_PORT",
+                    "placeholder": "465",
+                    "hint": "SSL 通常为 465，STARTTLS 通常为 587；留空将使用默认 465",
+                    "optional": true
+                  },
+                  {
+                    "id": "email",
+                    "label": "邮箱地址",
+                    "env": "SMTP_USER",
+                    "placeholder": "you@example.com",
+                    "hint": "填写你的完整邮箱地址（同时用于 IMAP 与 SMTP 登录）"
+                  },
+                  {
+                    "id": "auth-code",
+                    "label": "授权码 / 应用专用密码",
+                    "env": "SMTP_PASS",
+                    "placeholder": "客户端授权码或应用专用密码",
+                    "hint": "注意：多数邮箱（如 126、QQ、Gmail、高校邮箱）要求填写在网页设置中开启 IMAP/SMTP 后生成的「授权码」或「应用专用密码」，而非登录密码。"
+                  }
+                ],
+                "docsUrl": "https://github.com/samihalawa/email-smtp-imap-mcp#readme",
+                "docsLabel": "参数说明"
               }
             ]
           }

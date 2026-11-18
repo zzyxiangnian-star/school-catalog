@@ -4999,6 +4999,466 @@
       ],
       "creatorName": "sean",
       "license": "MIT"
+    },
+    {
+      "id": "grokbot-skill-crawl4ai-web-harvest",
+      "versionId": "grokbot-version-crawl4ai-web-harvest-v1-08d98615d2acc380",
+      "slug": "crawl4ai-web-harvest",
+      "name": "网页信源爬取与降噪",
+      "description": "基于 unclecode/crawl4ai 与 browser-use/browser-use 的双引擎网页信源采集技能，支持静态毫秒级正文降噪转 Markdown 与动态 SPA 点击翻页、登录态复用采集，输出附带来源 URL、时间戳、SHA-256 校验哈希的结构化语料与可复现脚本，直接对接 #04 文档 ETL、#22 双人播客与 #23 量化投研。",
+      "tagline": "静态毫秒降噪与动态反爬，输出可复现结构化网页语料",
+      "section": "new",
+      "category": "research",
+      "icon": "skills/crawl4ai-web-harvest.icon.svg",
+      "bundle": "skills/crawl4ai-web-harvest.zip",
+      "bundleSha256": "08d98615d2acc3807aedfcda8eaced47b154e034798fbf3eccc2881427d6d3c7",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-build123d-freecad-modeling",
+      "versionId": "grokbot-version-build123d-freecad-modeling-v1-05f07fe2ff87e845",
+      "slug": "build123d-freecad-modeling",
+      "name": "参数化CAD建模与几何校验",
+      "description": "依托 build123d-mcp 与 FreeCAD MCP 构建代码级参数化机械零件与装配体，完成多视角预览渲染及体积、质心、公差与可打印性几何校验。支持承接上游 #06 正交三视图参考并产出标准化 STEP/STL 文件，无缝对接下游 #18 3D 打印切片与 #07 BOM 核算流水线。",
+      "tagline": "代码级参数化CAD建模与多视角几何校验",
+      "section": "new",
+      "category": "design",
+      "icon": "skills/build123d-freecad-modeling.icon.svg",
+      "bundle": "skills/build123d-freecad-modeling.zip",
+      "bundleSha256": "05f07fe2ff87e84546d60352f750f11ae987a5fdb8e72146b1ab6fa6e76288aa",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-blender-3d-pipeline",
+      "versionId": "grokbot-version-blender-3d-pipeline-v1-d834ac62124de990",
+      "slug": "blender-3d-pipeline",
+      "name": "三维场景程序化建模与渲染",
+      "description": "通过 ahujasid/mcp-for-blender 直连本地运行的 Blender 3D 实例，执行程序化建模、上游 CAD 零件导入精修、PBR 材质节点搭建、三点/HDRI 布光、相机轨迹动画与 Cycles/EEVEE 多格式渲染导出。内置前置连通性检测、尺度对齐与视口截图自检，支持无缝承接 #02 CAD 零件并向 #08 HyperFrames 视频 Bot 交付商业级渲染资产。",
+      "tagline": "操控 Blender 完成建模、PBR材质、布光与成片渲染。",
+      "section": "catalog",
+      "category": "design",
+      "icon": "skills/blender-3d-pipeline.icon.svg",
+      "bundle": "skills/blender-3d-pipeline.zip",
+      "bundleSha256": "d834ac62124de990b689dd3020ee81b13ade48cfcce108e643e7fda28a9f69b1",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-mineru-doc-etl",
+      "versionId": "grokbot-version-mineru-doc-etl-v1-7b3771e28c72c7a3",
+      "slug": "mineru-doc-etl",
+      "name": "MinerU 高精度文档解析",
+      "description": "基于 opendatalab/MinerU 的高精度文档结构化提取技能，专治双栏论文、扫描件、跨页复杂表格、LaTeX 公式、电路规格书与财报 PDF。支持与 pdf 技能及 filesystem MCP 协同，输出带块级坐标的 Markdown、JSON 与独立图表资产，并严格隔离 OCR 原文与不可辨认占位，为 #07 BOM 核算、#22 播客合成与 #23 投研提供零幻觉可引用数据源。",
+      "tagline": "复杂版式 PDF 零失真解析与结构化导出",
+      "section": "catalog",
+      "category": "documents",
+      "icon": "skills/mineru-doc-etl.icon.svg",
+      "bundle": "skills/mineru-doc-etl.zip",
+      "bundleSha256": "7b3771e28c72c7a324046d5872db5ac67dfb256e9293e418b501a07ac9231970",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-uitars-desktop-gui",
+      "versionId": "grokbot-version-uitars-desktop-gui-v1-6b0ab694b54bbad5",
+      "slug": "uitars-desktop-gui",
+      "name": "UI-TARS 桌面视觉操控",
+      "description": "融合 bytedance/UI-TARS-desktop 视觉定位与 Windows MCP / Desktop Commander，接管无 API、无 CLI 的传统闭源桌面软件（ERP、财务客户端、3D 切片软件、微信桌面端等）。坚持「截图观测 → 坐标规划 → 单步动作 → 复核截图」确定性闭环，并在删除、支付及对外发送前强制暂停二次确认。",
+      "tagline": "视觉定位驱动闭源桌面软件单步截图复核闭环",
+      "section": "catalog",
+      "category": "automation",
+      "icon": "skills/uitars-desktop-gui.icon.svg",
+      "bundle": "skills/uitars-desktop-gui.zip",
+      "bundleSha256": "6b0ab694b54bbad514747dbe8ab9ec208bb1bf25fca5d55979211c9859b9311c",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-comfyui-multiview-assets",
+      "versionId": "grokbot-version-comfyui-multiview-assets-v1-88e5be00b4110020",
+      "slug": "comfyui-multiview-assets",
+      "name": "ComfyUI 多视图资产生成",
+      "description": "基于 Comfy-Org/comfy-skills 与 Hugging Face MCP 编排执行版本化 ComfyUI API Workflow JSON，稳定产出一致的正交三视图、PBR 法线/粗糙度贴图与去背景产品图。支持严格锁定随机种子与工作流哈希以保障工业可复现出图，并在 C2M 闭环中将 #17 闲鱼买家草图或破损零件照转化为标准化正交三视图交付 #02 CAD Bot。",
+      "tagline": "版本化调度正交三视图、PBR 贴图与去背景工业资产。",
+      "section": "catalog",
+      "category": "design",
+      "icon": "skills/comfyui-multiview-assets.icon.svg",
+      "bundle": "skills/comfyui-multiview-assets.zip",
+      "bundleSha256": "88e5be00b4110020704ef6ffcd09c82ac51f6eed92e9cad34b16d5de5d77a455",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-sandbox-bom-costing",
+      "versionId": "grokbot-version-sandbox-bom-costing-v1-c7b8b9765489b874",
+      "slug": "sandbox-bom-costing",
+      "name": "沙盒 BOM 确定性核算",
+      "description": "在 E2B 隔离沙盒（e2b-dev/mcp-server）或本地受控 Python 环境中运行确定性 BOM 与制造成本计算模型，彻底杜绝大模型心算幻觉。支持接入 #02 CAD 零件体积克重、#13 KiCad BOM 网表与供应商阶梯报价表，联合 xlsx 技能输出全动态公式驱动的多 Sheet 核算工作簿与多维敏感性区间分析，适配 C2M 3D 打印接单报价与硬件小批量打样审批流水线。",
+      "tagline": "隔离沙盒建模，输出带公式BOM表与敏感性报价",
+      "section": "catalog",
+      "category": "data-analytics",
+      "icon": "skills/sandbox-bom-costing.icon.svg",
+      "bundle": "skills/sandbox-bom-costing.zip",
+      "bundleSha256": "c7b8b9765489b8741c63485bd2aeca805b18e21767899ac1809ea49e698207ac",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-hyperframes-video-engine",
+      "versionId": "grokbot-version-hyperframes-video-engine-v1-564a2a6ab5994ad9",
+      "slug": "hyperframes-video-engine",
+      "name": "程序化视频确定性引擎",
+      "description": "以代码构建确定性时间轴的 1080p 程序化视频工作流，优先基于 heygen-com/hyperframes 引擎，兼容 remotion-dev/skills 与 hypit-ai/hypit 爆款结构克隆。内置分镜编排、#03/#22 音画卡点协同接口及 4/4 关键帧截图质检门禁，确保每一帧与成片 MP4 稳定可复现。",
+      "tagline": "用确定性代码编排分镜动效与 1080p 视频交付",
+      "section": "new",
+      "category": "design",
+      "icon": "skills/hyperframes-video-engine.icon.svg",
+      "bundle": "skills/hyperframes-video-engine.zip",
+      "bundleSha256": "564a2a6ab5994ad90e165a6f56b3b514528f0546d93892f88f5b320e41c20ab5",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-editable-pptx-architect",
+      "versionId": "grokbot-version-editable-pptx-architect-v1-4fd75b9bb726c6cd",
+      "slug": "editable-pptx-architect",
+      "name": "可编辑 PPTX 架构编排",
+      "description": "融合 `zhuyansen/awesome-codex-ppt-skills`、`icip-cas/PPTAgent` 与原生 OOXML 最佳实践的端到端演示文稿架构技能。先建立信息金字塔与视觉母版，再通过 `python-pptx` 编程生成 100% 原生可二次编辑的矢量形状、表格与数据图表（严禁整页拍成图片），最后经 LibreOffice 转 PDF 渲染逐页缩略图完成重叠与溢出视觉质检。",
+      "tagline": "先定金字塔与母版，再原生矢量图表生成并渲染质检。",
+      "section": "new",
+      "category": "documents",
+      "icon": "skills/editable-pptx-architect.icon.svg",
+      "bundle": "skills/editable-pptx-architect.zip",
+      "bundleSha256": "4fd75b9bb726c6cdc33b107e2d32591764bce98a2a4e486fb7724da8ae462936",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-figma-token-codegen",
+      "versionId": "grokbot-version-figma-token-codegen-v1-001cf67449163633",
+      "slug": "figma-token-codegen",
+      "name": "Figma Token 转码闭环",
+      "description": "基于 GLips/Figma-Context-MCP 精准解析 Figma 图层结构、Auto Layout 约束、Design Tokens 与矢量/位图切片，生成适配 React/Tailwind 等前端框架的高保真组件代码。内置真实浏览器预览与原稿视觉差异对比硬性闭环，杜绝凭空估算尺寸与盲写交付。",
+      "tagline": "解析 Figma 图层生成代码并实测验收",
+      "section": "new",
+      "category": "coding",
+      "icon": "skills/figma-token-codegen.icon.svg",
+      "bundle": "skills/figma-token-codegen.zip",
+      "bundleSha256": "001cf67449163633aeb376af3114f217f9f29f918e540d5c66db26ca7dcf55a0",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-dbhub-token-bi",
+      "versionId": "grokbot-version-dbhub-token-bi-v1-bbf965737ccb2594",
+      "slug": "dbhub-token-bi",
+      "name": "DBHub 极简安全 BI 取数",
+      "description": "依托 bytebase/dbhub 极省 Token（约 1.4k Token）的多引擎 SQL 网关及关联数据库 MCP，以渐进式 Schema 探查、严格只读聚合查询与空值/口径异常核验为核心，联合 data 技能输出高精度可视化 BI 报表与可追溯 SQL 审计清单。",
+      "tagline": "极省 Token 探库，只读取数并交付可追溯 BI 报表",
+      "section": "new",
+      "category": "data-analytics",
+      "icon": "skills/dbhub-token-bi.icon.svg",
+      "bundle": "skills/dbhub-token-bi.zip",
+      "bundleSha256": "bbf965737ccb2594cc49c86220ed9cd8f79f135d6b3f428b0c1a71f9588b929b",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-playwright-selfheal-qa",
+      "versionId": "grokbot-version-playwright-selfheal-qa-v1-f096c2e8ca0aca62",
+      "slug": "playwright-selfheal-qa",
+      "name": "Playwright自愈QA",
+      "description": "基于微软官方 microsoft/playwright-mcp 驱动浏览器无障碍树（Accessibility Tree），自动编写低脆性 Playwright E2E 测试并同步捕获控制台与网络报错。当页面发生轻微 UI 改版时，依据语义角色与可访问名称智能自愈修复测试脚本，并输出附带 Trace 与截图证据的验收报告及工作日冒烟巡检摘要。",
+      "tagline": "用无障碍树编写E2E测试、抓报错并语义自愈",
+      "section": "catalog",
+      "category": "coding",
+      "icon": "skills/playwright-selfheal-qa.icon.svg",
+      "bundle": "skills/playwright-selfheal-qa.zip",
+      "bundleSha256": "f096c2e8ca0aca62f22c2da146094af1a0ea4f2d4df744d2f7730c1ed530102c",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-kicad-pcb-engineering",
+      "versionId": "grokbot-version-kicad-pcb-engineering-v1-5686811199e364ed",
+      "slug": "kicad-pcb-engineering",
+      "name": "KiCad PCB 工程审查与投板验收",
+      "description": "基于 lamaalrajih/kicad-mcp 与 KiCad 9.0+ 官方 CLI 对硬件 PCB 工程执行全链路质检。覆盖原理图网表连通性与封装核查、ERC/DRC 自动化检查、电源回流/载流/差分线复核，以及 Gerber/Drill/Pick-and-Place/BOM 投板制造包验收与下游成本核算交接。",
+      "tagline": "自动核查 KiCad 原理图、DRC、BOM 与投板包",
+      "section": "catalog",
+      "category": "coding",
+      "icon": "skills/kicad-pcb-engineering.icon.svg",
+      "bundle": "skills/kicad-pcb-engineering.zip",
+      "bundleSha256": "5686811199e364edf62ec97095232c2b3cf2fdbc66db2095d0a4a4627cc31544",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-n8n-lark-hitl",
+      "versionId": "grokbot-version-n8n-lark-hitl-v1-68ef879487aa73aa",
+      "slug": "n8n-lark-hitl",
+      "name": "n8n与飞书人机审批",
+      "description": "整合 czlonkowski/n8n-mcp 与飞书官方 @larksuiteoapi/lark-mcp，自动编排、静态校验并部署带人机协同（HITL）审批门禁的 n8n 工作流。针对退款、外发、付款与上生产节点强制注入飞书交互式审批卡片、Wait Webhook 阻塞等待与多维表格审计台账，确保未获有效批准回调前严格阻断下游执行。",
+      "tagline": "编排校验n8n工作流并注入飞书HITL审批闭环",
+      "section": "new",
+      "category": "automation",
+      "icon": "skills/n8n-lark-hitl.icon.svg",
+      "bundle": "skills/n8n-lark-hitl.zip",
+      "bundleSha256": "68ef879487aa73aa37f78df49f2c7bdb081da183b5128fe62c6fa5b1c2cbde4e",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-mem0-postiz-growth",
+      "versionId": "grokbot-version-mem0-postiz-growth-v1-11986ddeed2b5e11",
+      "slug": "mem0-postiz-growth",
+      "name": "共享记忆沉淀与多平台社媒排期",
+      "description": "连接 mem0ai/mem0（及 memory MCP）跨 Bot 长期共享记忆层与开源全网社媒调度平台 gitroomhq/postiz-app。将调研、视频、客服、投研等业务 Bot 产出的用户偏好、品牌调性与爆款复盘沉淀为结构化共享记忆，在品牌约束下改写生成多平台待审排期队列并追踪互动回流，严格执行人工审核门控，绝不未经批准对外群发。",
+      "tagline": "沉淀跨 Bot 记忆并生成多平台待审社媒排期",
+      "section": "catalog",
+      "category": "productivity",
+      "icon": "skills/mem0-postiz-growth.icon.svg",
+      "bundle": "skills/mem0-postiz-growth.zip",
+      "bundleSha256": "11986ddeed2b5e11647c64b3f1d10fd9e4b436ae181f9caa47c7c687991d0732",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-mobile-gui-automation",
+      "versionId": "grokbot-version-mobile-gui-automation-v1-35a2925e95031784",
+      "slug": "mobile-gui-automation",
+      "name": "手机真机跨App自动化操控",
+      "description": "结合 mobile-next/mobile-mcp 原生无障碍元素树与 X-PLUG/MobileAgent 多模态视觉策略，精准操控已连接的 Android/iOS 真机与模拟器。专攻小红书图文/短视频发布、抖音互动、闲鱼/美团/微信小程序及企业移动端等无网页端、强风控场景，并支持无缝接收 #08 视频 Bot 产出的 15s 成片操作备用机完成发布引流闭环。",
+      "tagline": "融合无障碍树与视觉策略，稳定驱动真机跨App执行",
+      "section": "new",
+      "category": "automation",
+      "icon": "skills/mobile-gui-automation.icon.svg",
+      "bundle": "skills/mobile-gui-automation.zip",
+      "bundleSha256": "35a2925e950317847f7be17ec555046b0360502aa42a199dbac0edc431bc7f9d",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-xianyu-bargain-commerce",
+      "versionId": "grokbot-version-xianyu-bargain-commerce-v1-5bdac1b3648ddd73",
+      "slug": "xianyu-bargain-commerce",
+      "name": "闲鱼电商阶梯议价与接单",
+      "description": "面向闲鱼（shaxiu/XianyuAutoAgent、DoLovya/xianyu-mcp-server）与独立站（stripe/ai 官方 MCP）的 7×24 自动客服与接单技能。内置三段利润阶梯底价博弈与知识库精准答疑机制，支持 Stripe 收款链接生成与到账核验；遇到 3D 打印或定制零件需求时结构化提取尺寸与草图交接 #06 ComfyUI 与 #02 CAD Bot，触及底价红线或异常纠纷立即转飞书人工介入。",
+      "tagline": "阶梯底价议价、Stripe 核账与 C2M 定制接单",
+      "section": "new",
+      "category": "automation",
+      "icon": "skills/xianyu-bargain-commerce.icon.svg",
+      "bundle": "skills/xianyu-bargain-commerce.zip",
+      "bundleSha256": "5bdac1b3648ddd732ff3c5ef3eb2abb8ebfee740ade49bed1460f6f3a67bb8f6",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-bambu-homeassistant-fab",
+      "versionId": "grokbot-version-bambu-homeassistant-fab-v1-c74f4e138b21f82a",
+      "slug": "bambu-homeassistant-fab",
+      "name": "拓竹切片打印与物联联动",
+      "description": "面向「3D打印智能硬件管家」的物理制造核心技能，整合 bambu-printer-mcp、Kiln 与 homeassistant-mcp，覆盖 STL/3MF 模型检验、自动切片与 AMS 校验、拓竹局域网开印、防炒面视觉巡检止损，以及排风/灯光/飞书取件联动。",
+      "tagline": "打通模型质检、切片开印、防炒面巡检与智能家居联动",
+      "section": "new",
+      "category": "automation",
+      "icon": "skills/bambu-homeassistant-fab.icon.svg",
+      "bundle": "skills/bambu-homeassistant-fab.zip",
+      "bundleSha256": "c74f4e138b21f82ae4b62130554107df12b95d7be3fd72eae2b82f9a168f7378",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-revit-qgis-spatial",
+      "versionId": "grokbot-version-revit-qgis-spatial-v1-c4603bc5ac3ff93c",
+      "slug": "revit-qgis-spatial",
+      "name": "Revit与QGIS空间测绘",
+      "description": "打通建筑 BIM（Revit 水电暖通与构件）、室内家装（3d-new-era-ai 户型采光排布）与 GIS 空间测绘（QGIS 选址热力图与地形分析）的跨软件工程技能。内建坐标系（EPSG）、标高单位与构件碰撞三重校验规则，规范输出 .rvt/.ifc、GeoJSON/GPKG 图层及校验清单。",
+      "tagline": "驱动Revit、3D家装与QGIS空间测绘。",
+      "section": "catalog",
+      "category": "design",
+      "icon": "skills/revit-qgis-spatial.icon.svg",
+      "bundle": "skills/revit-qgis-spatial.zip",
+      "bundleSha256": "c4603bc5ac3ff93c4555134792761f0d2d8cb634e868386334f2f398cf4c1e8a",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-serena-repomix-surgeon",
+      "versionId": "grokbot-version-serena-repomix-surgeon-v1-71c9052714a2e9f5",
+      "slug": "serena-repomix-surgeon",
+      "name": "LSP语义级代码手术",
+      "description": "面向数万行级遗留代码库的高精度架构定位与重构技能。通过 Repomix 压缩仓库骨架获取全局依赖视图，结合 Serena 的 LSP 符号定义跳转、全项目引用点枚举与 AST 符号级精准替换完成零误伤修改，并在术后自动串联类型检查、单元测试与 change-review 最小 Diff 复核。",
+      "tagline": "先压仓库全景再做LSP符号定位与AST级精准重构",
+      "section": "new",
+      "category": "coding",
+      "icon": "skills/serena-repomix-surgeon.icon.svg",
+      "bundle": "skills/serena-repomix-surgeon.zip",
+      "bundleSha256": "71c9052714a2e9f56bce29b84edc8e7fa91554dd76476ddd1ec56dac795f7b96",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-ghidra-binary-reverse",
+      "versionId": "grokbot-version-ghidra-binary-reverse-v1-97515f19c17d7f42",
+      "slug": "ghidra-binary-reverse",
+      "name": "Ghidra二进制逆向分析",
+      "description": "通过 LaurieWired/GhidraMCP 连接本地 Ghidra 平台，对闭源固件、工业插件与二进制程序执行入口测绘、字符串与密码学追踪、批量语义重命名及结构体还原。可联合 security-audit-skill 与 filesystem MCP 产出结构化协议文档及可复验安全评估报告。",
+      "tagline": "借助 Ghidra 批量还原二进制符号、协议与风险。",
+      "section": "new",
+      "category": "coding",
+      "icon": "skills/ghidra-binary-reverse.icon.svg",
+      "bundle": "skills/ghidra-binary-reverse.zip",
+      "bundleSha256": "97515f19c17d7f42133fcbab6d3085990442771fa865028299437827ecc2b122",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-ableton-notebook-audio",
+      "versionId": "grokbot-version-ableton-notebook-audio-v1-c6739c00034037e7",
+      "slug": "ableton-notebook-audio",
+      "name": "Ableton配乐与双人播客",
+      "description": "提供双轨音频生产能力：一方面通过 ahujasid/ableton-mcp 操控 Ableton Live 编曲并输出无版权原创配乐工程与分轨 WAV/MP3；另一方面结合 qiaomu-anything-to-notebooklm 与 jacob-bd/gemini-notebook-mcp-cli，将上游长研报一键转为带来源引用的双人对谈播客。",
+      "tagline": "DAW 无版权分轨编曲与长研报双人播客双轨生成",
+      "section": "new",
+      "category": "productivity",
+      "icon": "skills/ableton-notebook-audio.icon.svg",
+      "bundle": "skills/ableton-notebook-audio.zip",
+      "bundleSha256": "c6739c00034037e70b2e8afa93cfbf85414b697df232db47ede396779d88a9ac",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
+    },
+    {
+      "id": "grokbot-skill-tradingagents-debate-quant",
+      "versionId": "grokbot-version-tradingagents-debate-quant-v1-a81458476afa21ec",
+      "slug": "tradingagents-debate-quant",
+      "name": "多角色辩论量化投研决策",
+      "description": "参考 LangGraph 多智能体投研标杆 TauricResearch/TradingAgents 架构，强制串联基本面/现货供需分析、舆情情绪归因、看多与看空至少两轮基于证据的强制对抗辩论及风控官独立核算。有效根除单大模型面对行情“和稀泥、盲目乐观”的缺陷，输出带时间戳、正反论据对比、置信区间与止损上限的投研及大宗采购决策报告。",
+      "tagline": "四角色对抗辩论与独立风控审定的投研决策",
+      "section": "new",
+      "category": "research",
+      "icon": "skills/tradingagents-debate-quant.icon.svg",
+      "bundle": "skills/tradingagents-debate-quant.zip",
+      "bundleSha256": "a81458476afa21ec1c1c33983dad87cbcdc4ed9d111b5b0cb231d0eb1406cadc",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "grokbot"
     }
   ]
 }

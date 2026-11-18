@@ -2700,6 +2700,197 @@
         }
       ],
       "skills": []
+    },
+    {
+      "slug": "dbhub",
+      "name": "DBHub",
+      "tagline": "极省 Token 的多数据库统一安全网关",
+      "description": "Bytebase 开源多数据库 MCP 网关（仅约 1.4k Token 上下文开销），统一支持 PostgreSQL、MySQL、MariaDB、SQLite、Oracle 与 SQL Server 只读分析与 Schema 检索。",
+      "category": "data-analytics",
+      "creatorName": "Bytebase",
+      "repository": "https://github.com/bytebase/dbhub",
+      "featured": true,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-dbhub-mcp",
+          "name": "DBHub",
+          "description": "通过 npx 启动 @bytebase/dbhub（默认 --demo 演示模式；生产连接请传入 --dsn 或 dbhub.toml）。",
+          "server": {
+            "name": "dbhub",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "@bytebase/dbhub",
+              "--transport",
+              "stdio",
+              "--demo"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mcp-for-blender",
+      "name": "Blender MCP",
+      "tagline": "AI 直接操控 Blender 进行三维建模与渲染",
+      "description": "ahujasid 开源高星 Blender MCP 服务，支持大模型直接创建与编辑三维场景、材质节点、相机布光与渲染导出。",
+      "category": "design",
+      "creatorName": "ahujasid",
+      "repository": "https://github.com/ahujasid/mcp-for-blender",
+      "stars": 34000,
+      "featured": true,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-blender-mcp",
+          "name": "Blender MCP",
+          "description": "通过 uvx 启动 mcp-for-blender（需在 Blender 内启用对应插件桥接）。",
+          "server": {
+            "name": "blender",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "mcp-for-blender"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ableton-mcp",
+      "name": "Ableton MCP",
+      "tagline": "自然语言驱动 Ableton Live 编曲与混音",
+      "description": "ahujasid 开源 Ableton Live MCP 服务，支持创建轨道、写入 MIDI 和弦音符、调节合成器参数与安排 Clip。",
+      "category": "productivity",
+      "creatorName": "ahujasid",
+      "repository": "https://github.com/ahujasid/ableton-mcp",
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-ableton-mcp",
+          "name": "Ableton MCP",
+          "description": "通过 uvx 启动 ableton-mcp（需在 Ableton Live 安装配套 Remote Script）。",
+          "server": {
+            "name": "ableton-mcp",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "ableton-mcp"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "build123d-mcp",
+      "name": "build123d MCP",
+      "tagline": "Python 参数化 CAD 建模与 STEP/STL 导出",
+      "description": "封装 build123d 参数化 CAD 内核的 MCP 服务，支持增量建模、多视角预览渲染、体积测量与 STEP/STL/DXF 工业格式导出。",
+      "category": "design",
+      "creatorName": "pzfreo",
+      "repository": "https://github.com/pzfreo/build123d-mcp",
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-build123d-mcp",
+          "name": "build123d MCP",
+          "description": "通过 uvx 启动 build123d-mcp 参数化建模服务。",
+          "server": {
+            "name": "build123d",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "build123d-mcp"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "freecad-mcp",
+      "name": "FreeCAD MCP",
+      "tagline": "自然语言控制 FreeCAD 参数化工程建模",
+      "description": "通过 RPC Addon 连接 FreeCAD 桌面端与 AI 智能体，支持草图约束、三维实体拉伸装配与视图检查。",
+      "category": "design",
+      "creatorName": "neka-nat",
+      "repository": "https://github.com/neka-nat/freecad-mcp",
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-freecad-mcp",
+          "name": "FreeCAD MCP",
+          "description": "通过 uvx 启动 freecad-mcp（需在 FreeCAD 中启用 FreeCADMCP 插件）。",
+          "server": {
+            "name": "freecad",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "freecad-mcp"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "repomix",
+      "name": "Repomix",
+      "tagline": "一键打包代码仓库为 AI 友好骨架上下文",
+      "description": "将本地或远程代码仓库智能压缩为结构化 XML/Markdown/JSON 骨架，极大降低老项目重构与跨库分析的 Token 消耗。",
+      "category": "coding",
+      "creatorName": "yamadashy",
+      "repository": "https://github.com/yamadashy/repomix",
+      "featured": true,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-repomix-mcp",
+          "name": "Repomix",
+          "description": "通过 npx 启动 repomix --mcp 服务。",
+          "server": {
+            "name": "repomix",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "repomix",
+              "--mcp"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "notebooklm-mcp-cli",
+      "name": "NotebookLM MCP",
+      "tagline": "编程化调用 NotebookLM 知识库与双人播客生成",
+      "description": "jacob-bd 开源 NotebookLM CLI 与 MCP 工具，支持管理笔记本、注入信源文档及自动合成带引用溯源的双人对谈播客音频。",
+      "category": "research",
+      "creatorName": "jacob-bd",
+      "repository": "https://github.com/jacob-bd/notebooklm-mcp-cli",
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-notebooklm-mcp",
+          "name": "NotebookLM MCP",
+          "description": "通过 uvx 启动 notebooklm-mcp（首次使用需通过 nlm CLI 完成浏览器 Cookie 登录态授权）。",
+          "server": {
+            "name": "notebooklm",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "--from",
+              "notebooklm-mcp-cli",
+              "notebooklm-mcp"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

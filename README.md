@@ -4,11 +4,11 @@ Remote marketplace catalog for **school** (Bots, Skills, Skill Packs, and MCP Pl
 
 ## Summary
 
-- **Skill Catalog Entries (`catalog.json`)**: 109 total
+- **Skill Catalog Entries (`catalog.json`)**: 132 total
   - **Skill Packs**: 24 packs (269 embedded child skills)
-  - **Standalone & Curated Bot Skills**: 85 skills (45 GitHub standalone + 40 Chinese-localized Bot dependency skills by `sean`)
-- **MCP Plugins (`plugins.json`)**: 72 plugins (37 HTTP, 35 stdio, including 9 Chinese connectors adapted from Octop and 3 personal mail IMAP/SMTP connectors)
-- **Built-in Bots (`agents.json`)**: 27 Chinese-localized Bot templates (`creatorName: "sean"`)
+  - **Standalone & Curated Bot Skills**: 108 skills (45 GitHub standalone + 40 Chinese-localized Bot dependency skills by `sean` + 23 Grokbot-matrix specialized Bot skills)
+- **MCP Plugins (`plugins.json`)**: 79 plugins (37 HTTP, 42 stdio, including 9 Chinese connectors adapted from Octop, 3 personal mail IMAP/SMTP connectors, and 7 Grokbot ecosystem MCPs)
+- **Built-in Bots (`agents.json`)**: 50 Chinese-localized Bot templates (27 by `sean` + 23 Grokbot multi-domain practical sub-Bots `#01–#23`)
 
 ## Structure
 

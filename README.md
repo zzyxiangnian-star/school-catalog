@@ -4,11 +4,11 @@ Remote marketplace catalog for **school** (Bots, Skills, Skill Packs, and MCP Pl
 
 ## Summary
 
-- **Skill Catalog Entries (`catalog.json`)**: 132 total
+- **Skill Catalog Entries (`catalog.json`)**: 133 total
   - **Skill Packs**: 24 packs (269 embedded child skills)
-  - **Standalone & Curated Bot Skills**: 108 skills (45 GitHub standalone + 40 Chinese-localized Bot dependency skills by `sean` + 23 Grokbot-matrix specialized Bot skills)
+  - **Standalone & Curated Bot Skills**: 109 skills (45 GitHub standalone + 40 Chinese-localized Bot dependency skills by `sean` + 23 Grokbot-matrix specialized Bot skills + 1 official `NVIDIA/SkillEvaluator` skill)
 - **MCP Plugins (`plugins.json`)**: 79 plugins (37 HTTP, 42 stdio, including 9 Chinese connectors adapted from Octop, 3 personal mail IMAP/SMTP connectors, and 7 Grokbot ecosystem MCPs)
-- **Built-in Bots (`agents.json`)**: 50 Chinese-localized Bot templates (27 by `sean` + 23 Grokbot multi-domain practical sub-Bots `#01–#23`)
+- **Built-in Bots (`agents.json`)**: 51 Chinese-localized Bot templates (27 by `sean` + 23 Grokbot multi-domain practical sub-Bots `#01–#23` + 1 `Skill 审查员` by `school`)
 
 ## Structure
 
@@ -16,4 +16,4 @@ Remote marketplace catalog for **school** (Bots, Skills, Skill Packs, and MCP Pl
 - `catalog.json` — Curated Skill and Skill Pack index (`schemaVersion: 1`, `catalogVersion: "v1"`), ordered with hero (`data`), featured (`for-you`), new, and remaining catalog items sorted by GitHub stars descending
 - `plugins.json` — Curated MCP / Plugin catalog (`schemaVersion: 1`, `catalogVersion: "v1"`)
 - `skills/` — Skill bundle archives (`<slug>.zip`) and icons (`<slug>.icon.svg`)
-- `THIRD_PARTY_NOTICES.md` — Third-party attributions and MIT License notices (Octop, `email-smtp-imap-mcp`, `yuque-mcp`)
+- `THIRD_PARTY_NOTICES.md` — Third-party attributions and license notices (Octop, `email-smtp-imap-mcp`, `yuque-mcp`, `NVIDIA/SkillEvaluator`)

@@ -63,3 +63,13 @@ SOFTWARE.
 ## yuque-mcp (`1.0.0`)
 
 The Yuque connector (`yuque-mcp`) invokes [`yuque-mcp@1.0.0`](https://www.npmjs.com/package/yuque-mcp) ([GitHub](https://github.com/yuque/yuque-mcp-server)) over stdio via `npx`, licensed under the MIT License.
+
+## NVIDIA SkillEvaluator (`1.0.1`)
+
+The `skillevaluator` skill bundle (`skills/skillevaluator.zip`) incorporates the official skill, reference guides, evaluation definitions, license, and notice from [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) (commit `85f39def06ab6022ea955162ddf636b34e3f45e8`), licensed under the Apache License, Version 2.0.
+
+```text
+Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Licensed under the Apache License, Version 2.0.
+See `LICENSE` and `NOTICE` bundled inside `skills/skillevaluator.zip` for full terms.
+```

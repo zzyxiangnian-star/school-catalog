@@ -5459,6 +5459,46 @@
         "references/stack-and-sop.md"
       ],
       "creatorName": "grokbot"
+    },
+    {
+      "id": "school-skill-skillevaluator",
+      "versionId": "school-skill-skillevaluator-v1-4b7f460a7510",
+      "slug": "skillevaluator",
+      "name": "SkillEvaluator 技能审查评估",
+      "description": "NVIDIA 开源（Apache-2.0）Agent Skill 评估框架官方技能，覆盖 Harness 宿主兼容性检查、Tier 1 静态质量与 500+ 规则安全/PII/密钥/依赖门禁、Tier 2 语义去重与跨库重叠检测，以及 Tier 3 基于 Harbor 沙盒的 With/Without Skill 对照实效评测（Skill Lift）。",
+      "tagline": "NVIDIA 官方三层 Agent Skill 质量、安全、去重与实效评测引擎",
+      "section": "new",
+      "category": "automation",
+      "icon": "skills/skillevaluator.icon.svg",
+      "bundle": "skills/skillevaluator.zip",
+      "bundleSha256": "4b7f460a751089f0f0784b6be3ec152bd1da1b61d7c00b84e47f0247a4ac7298",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "LICENSE",
+        "NOTICE",
+        "SKILL.md",
+        "evals/config.yml",
+        "evals/evals.json",
+        "references/commands-tier1.md",
+        "references/commands-tier2-tier3.md",
+        "references/commands-validate.md",
+        "references/custom-graders.md",
+        "references/providers.md",
+        "references/reports-and-ci.md",
+        "references/tier3-datasets.md",
+        "references/tier3-running.md",
+        "references/troubleshooting.md"
+      ],
+      "creatorName": "NVIDIA",
+      "license": "Apache-2.0",
+      "stars": 3947,
+      "source": {
+        "provider": "nvidia",
+        "repository": "https://github.com/NVIDIA/SkillEvaluator",
+        "commit": "85f39def06ab6022ea955162ddf636b34e3f45e8",
+        "url": "https://github.com/NVIDIA/SkillEvaluator/tree/85f39def06ab6022ea955162ddf636b34e3f45e8/skills/skillevaluator"
+      }
     }
   ]
 }

@@ -1,0 +1,55 @@
+name: Sync Official Upstream Skills
+
+on:
+  workflow_dispatch:
+    inputs:
+      refresh_existing:
+        description: "Rebuild existing upstream skills when commits advance"
+        required: false
+        default: "false"
+        type: boolean
+  schedule:
+    # Weekly on Monday at 03:00 UTC
+    - cron: "0 3 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout skill branch
+        uses: actions/checkout@v4
+        with:
+          ref: skill
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Sync official OpenAI & Anthropic skill repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          FLAGS="--apply"
+          if [ "${{ inputs.refresh_existing }}" = "true" ]; then
+            FLAGS="$FLAGS --refresh-existing"
+          fi
+          python scripts/sync_upstream.py $FLAGS
+
+      - name: Verify catalog integrity
+        run: python scripts/sync_upstream.py --verify-only
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json README.md skills/
+          if git diff --cached --quiet; then
+            echo "No upstream changes detected."
+            exit 0
+          fi
+          git commit -m "chore(sync): auto-sync official OpenAI & Anthropic skills"
+          git push origin skill

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "anthropics-skills",
+      "repository": "anthropics/skills",
+      "branch": "main",
+      "mode": "skills-dir",
+      "provider": "anthropics",
+      "creatorName": "Anthropic",
+      "license": "Apache-2.0",
+      "paths": ["skills"],
+      "exclude": ["template"],
+      "defaultSection": "new",
+      "allowSingleMd": true
+    },
+    {
+      "id": "anthropics-knowledge-work",
+      "repository": "anthropics/knowledge-work-plugins",
+      "branch": "main",
+      "mode": "claude-plugins",
+      "provider": "anthropics-knowledge-work",
+      "creatorName": "Anthropic",
+      "license": "Apache-2.0",
+      "paths": [".", "partner-built"],
+      "exclude": [],
+      "slugPrefix": "",
+      "defaultSection": "catalog",
+      "allowSingleMd": true
+    },
+    {
+      "id": "anthropics-claude-plugins-official",
+      "repository": "anthropics/claude-plugins-official",
+      "branch": "main",
+      "mode": "claude-plugins",
+      "provider": "anthropics-official-plugins",
+      "creatorName": "Anthropic",
+      "license": "MIT",
+      "paths": ["plugins", "external_plugins"],
+      "exclude": ["example-plugin", "frontend-design", "skill-creator"],
+      "slugPrefix": "claude-",
+      "defaultSection": "new",
+      "allowSingleMd": true
+    },
+    {
+      "id": "openai-skills",
+      "repository": "openai/skills",
+      "branch": "main",
+      "mode": "skills-dir",
+      "provider": "openai",
+      "creatorName": "OpenAI",
+      "license": "Apache-2.0",
+      "paths": ["skills/.curated", "skills/.system"],
+      "exclude": [],
+      "slugOverrides": {
+        "pdf": "openai-pdf",
+        "skill-creator": "openai-skill-creator"
+      },
+      "dedupeNames": true,
+      "defaultSection": "new",
+      "allowSingleMd": false
+    }
+  ]
+}

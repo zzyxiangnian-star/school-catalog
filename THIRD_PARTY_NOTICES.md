@@ -63,3 +63,12 @@ SOFTWARE.
 ## yuque-mcp (`1.0.0`)
 
 The Yuque connector (`yuque-mcp`) invokes [`yuque-mcp@1.0.0`](https://www.npmjs.com/package/yuque-mcp) ([GitHub](https://github.com/yuque/yuque-mcp-server)) over stdio via `npx`, licensed under the MIT License.
+
+## Official Skill Upstream Mirrors (`skill` branch)
+
+Skill packages and packs mirrored automatically into `catalog.json` and `skills/` via `scripts/sync_upstream.py` originate from the following official open-source repositories:
+
+- [`anthropics/skills`](https://github.com/anthropics/skills) (`Apache-2.0` / repository license terms)
+- [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins) (`Apache-2.0`)
+- [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) (upstream plugin license terms)
+- [`openai/skills`](https://github.com/openai/skills) (`Apache-2.0` / repository license terms)

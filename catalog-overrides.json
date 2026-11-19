@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 1,
+  "overrides": {
+    "aspnet-core": {
+      "name": "ASP.NET Core",
+      "tagline": "官方 ASP.NET Core 应用架构与重构",
+      "description": "基于微软官方最新实践构建、审查与重构 ASP.NET Core Web 应用与后端架构。",
+      "category": "coding",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "AN"
+    },
+    "chatgpt-apps": {
+      "name": "ChatGPT Apps SDK",
+      "tagline": "MCP 与 Widget UI 应用开发指南",
+      "description": "构建、搭建与排障结合 MCP 服务端和 Widget UI 组件的 ChatGPT Apps SDK 应用。",
+      "category": "coding",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "CA"
+    },
+    "define-goal": {
+      "name": "Define Goal",
+      "tagline": "任务开工前的可量化目标澄清",
+      "description": "在动手开发前协助澄清并锁定具体、可衡量的目标与验收边界。",
+      "category": "productivity",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "DG"
+    },
+    "figma-code-connect-components": {
+      "name": "Figma Code Connect",
+      "tagline": "Figma 设计组件与代码组件映射",
+      "description": "使用 Code Connect 工具将 Figma 设计组件与前端代码库组件精确绑定映射。",
+      "category": "design",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "FC"
+    },
+    "figma-create-design-system-rules": {
+      "name": "Figma Design System Rules",
+      "tagline": "为代码库生成专属设计系统规范",
+      "description": "扫描并分析代码库，为项目自动生成可执行的 Figma 设计系统规则文档。",
+      "category": "design",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "FR"
+    },
+    "figma-create-new-file": {
+      "name": "Figma Create New File",
+      "tagline": "快速创建空白 Figma / FigJam 文件",
+      "description": "在调用绘图写入流程前按规范新建空白 Figma 设计文件或 FigJam 白板。",
+      "category": "design",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "FN"
+    },
+    "figma-generate-design": {
+      "name": "Figma Generate Design",
+      "tagline": "页面级多区块布局直出 Figma",
+      "description": "配合 figma-use 将应用页面、视图与多区块界面结构转化为高质量 Figma 设计稿。",
+      "category": "design",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "FG"
+    },
+    "figma-generate-library": {
+      "name": "Figma Generate Library",
+      "tagline": "从代码库反向生成 Figma 组件库",
+      "description": "从现有前端代码库自动提取变量 Token 与组件变体，并在 Figma 中生成专业组件库。",
+      "category": "design",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "FL"
+    },
+    "figma-use": {
+      "name": "Figma Use Guard",
+      "tagline": "Figma 脚本读写操作前置执行守卫",
+      "description": "调用 `use_figma` 前的强制规范守卫，确保节点创建、样式与变量写入零失误。",
+      "category": "design",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "FU"
+    },
+    "hatch-pet": {
+      "name": "Hatch Pet",
+      "tagline": "Codex 桌宠精灵动画生成与打包",
+      "description": "从角色原画或生成图制作、修复、质检并打包适配 Codex 的动态桌宠精灵表。",
+      "category": "design",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "HP"
+    },
+    "migrate-to-codex": {
+      "name": "Migrate to Codex",
+      "tagline": "指令、技能与 MCP 配置一键迁移 Codex",
+      "description": "将其他编程助手的指令文件、Skills、Agents 与 MCP 配置平滑迁移至 Codex。",
+      "category": "automation",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "MC"
+    },
+    "notion-meeting-intelligence": {
+      "name": "Notion Meeting Intelligence",
+      "tagline": "基于 Notion 上下文的智能会议筹备",
+      "description": "整合 Notion 资料与项目上下文，自动起草会议议程、预读材料与决策摘要。",
+      "category": "productivity",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "NM"
+    },
+    "notion-research-documentation": {
+      "name": "Notion Research Docs",
+      "tagline": "跨 Notion 多源调研合成结构化文档",
+      "description": "检索多个 Notion 页面并综合提炼为结构清晰的调研简报与决策文档。",
+      "category": "research",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "NR"
+    },
+    "openai-docs": {
+      "name": "OpenAI Docs",
+      "tagline": "OpenAI 官方文档与 API 权威检索",
+      "description": "查询最新的 OpenAI 产品文档、Responses/Agents API 规范与 Codex 官方使用指南。",
+      "category": "coding",
+      "section": "for-you",
+      "featured": true,
+      "iconLabel": "OD"
+    },
+    "openai-pdf": {
+      "name": "OpenAI Visual PDF",
+      "tagline": "注重排版渲染与视觉自检的 PDF 工具",
+      "description": "读取、生成与审校高排版精度 PDF 文档，内置逐页渲染视觉检查工作流。",
+      "category": "documents",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "OP"
+    },
+    "playwright-interactive": {
+      "name": "Playwright Interactive",
+      "tagline": "基于 js_repl 的持久化交互式 UI 调试",
+      "description": "通过持久化浏览器与 Electron 会话进行快速迭代式前端 UI 调试与实时验证。",
+      "category": "automation",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "PI"
+    },
+    "render-deploy": {
+      "name": "Render Deploy",
+      "tagline": "Render 云平台分析与一键蓝图部署",
+      "description": "分析代码库并生成 `render.yaml` 部署蓝图与控制台直达链接，快速上线 Render 服务。",
+      "category": "automation",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "RD"
+    },
+    "security-ownership-map": {
+      "name": "Security Ownership Map",
+      "tagline": "Git 仓库安全归属拓扑与巴士因子分析",
+      "description": "分析仓库提交历史构建人员-文件安全归属拓扑，计算敏感模块集中度与巴士因子。",
+      "category": "coding",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "SO"
+    },
+    "winui-app": {
+      "name": "WinUI 3 App",
+      "tagline": "微软官方 WinUI 3 桌面应用开发指南",
+      "description": "遵循微软官方规范脚手架创建、开发并美化基于 C# 与 Windows App SDK 的 WinUI 3 桌面应用。",
+      "category": "coding",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "WU"
+    },
+    "yeet": {
+      "name": "Yeet Git & PR",
+      "tagline": "暂存提交推送并自动创建 GitHub PR",
+      "description": "通过 GitHub CLI 一条龙执行 git add、commit、push 并提交规范化 Pull Request。",
+      "category": "automation",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "YT"
+    },
+    "imagegen": {
+      "name": "OpenAI ImageGen",
+      "tagline": "官方文生图与图像编辑 CLI 技能",
+      "description": "调用 OpenAI 图像生成接口创作插画、摄影、材质贴图、精灵图与界面原型图。",
+      "category": "design",
+      "section": "for-you",
+      "featured": true,
+      "iconLabel": "IG"
+    },
+    "plugin-creator": {
+      "name": "Codex Plugin Creator",
+      "tagline": "规范创建与脚手架打包 Codex 插件",
+      "description": "生成符合 `.codex-plugin/plugin.json` 规范的 Codex 插件目录与完整脚手架。",
+      "category": "coding",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "PC"
+    },
+    "openai-skill-creator": {
+      "name": "Codex Skill Creator",
+      "tagline": "OpenAI 官方 Skill 设计与规范脚手架",
+      "description": "指导设计、编写、初始化与迭代评测高质量 OpenAI/Codex 标准 Skill 包。",
+      "category": "productivity",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "SC"
+    },
+    "skill-installer": {
+      "name": "Codex Skill Installer",
+      "tagline": "从精选列表或 GitHub 安装本地 Skill",
+      "description": "列出可安装技能并从官方目录或指定 GitHub 路径一键安装 Skill 至本地环境。",
+      "category": "automation",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "SI"
+    },
+    "academy-guide": {
+      "name": "Claude Academy Guide",
+      "tagline": "Anthropic 官方学习路径与课程推荐",
+      "description": "根据用户对 Claude 产品功能、MCP、Plugins 与团队落地的疑问精准匹配官方教程与课程。",
+      "category": "productivity",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "AG"
+    },
+    "discernment-nudge": {
+      "name": "Discernment Nudge",
+      "tagline": "关键决策输出前的事实与假设追问",
+      "description": "在给出实质性方案、估算或行动建议前自动补充 2-3 个精准核查问题，防患隐含假设盲区。",
+      "category": "productivity",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "DN"
+    },
+    "cowork-plugin-management": {
+      "name": "Cowork Plugin Management",
+      "tagline": "企业级 Cowork 插件定制与 MCP 配置",
+      "description": "创建、定制并管理贴合团队工具链的 Cowork 插件，统一配置 MCP 服务与工作流指令。",
+      "category": "automation",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "CP"
+    },
+    "pdf-viewer": {
+      "name": "Interactive PDF Viewer",
+      "tagline": "交互式 PDF 审阅批注与合同签章",
+      "description": "在交互视图中审阅、批注、填写表单并签署合同 PDF，提供实时视觉反馈与核章流。",
+      "category": "documents",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "PV"
+    },
+    "apollo": {
+      "name": "Apollo Sales Workflows",
+      "tagline": "Apollo 销售线索串联与自动化外联",
+      "description": "Anthropic 官方合作插件，串联多项 Apollo API 完成潜在客户挖掘、画像补全与外联闭环。",
+      "category": "productivity",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "AP"
+    },
+    "brand-voice": {
+      "name": "Brand Voice Guardrails",
+      "tagline": "跨文档提取品牌调性并自动合规把关",
+      "description": "自动汇总分散的品牌资料转化为可执行的内容规范护栏，确保文案输出调性一致。",
+      "category": "documents",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "BV"
+    },
+    "common-room": {
+      "name": "Common Room GTM Copilot",
+      "tagline": "Common Room 客户信号研究与通话筹备",
+      "description": "串联 Common Room 信号数据完成目标企业洞察、联系人背调与会前沟通提纲生成。",
+      "category": "research",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "CR"
+    },
+    "slack": {
+      "name": "Slack Collaboration Pack",
+      "tagline": "Slack 频道洞察提炼与消息起草协作",
+      "description": "结合官方 Slack 工作流，自动归纳群聊要点、起草回复并推进跨团队协同事项。",
+      "category": "productivity",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "SL"
+    },
+    "zoom-plugin": {
+      "name": "Zoom Developer Suite",
+      "tagline": "57 项 Zoom API、SDK 与会议机器人技能",
+      "description": "覆盖 Zoom REST API、音视频 SDK、Webhook、聊天机器人与 MCP 集成的官方完整开发套装。",
+      "category": "coding",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "ZM"
+    },
+    "claude-discord": {
+      "name": "Claude Discord Channel",
+      "tagline": "Discord 消息桥接与访问控制插件",
+      "description": "Anthropic 官方插件，为助手提供带配对认证、白名单与策略管控的 Discord 消息通道。",
+      "category": "automation",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "DC"
+    },
+    "claude-imessage": {
+      "name": "Claude iMessage Channel",
+      "tagline": "macOS iMessage 消息桥接与安全控制",
+      "description": "Anthropic 官方插件，直连本地 chat.db 与 AppleScript 实现带权限控制的消息通道。",
+      "category": "automation",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "IM"
+    },
+    "claude-telegram": {
+      "name": "Claude Telegram Channel",
+      "tagline": "Telegram Bot 桥接与白名单管控插件",
+      "description": "Anthropic 官方插件，支持 Telegram 机器人消息收发、配对授权与精细化访问策略。",
+      "category": "automation",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "TG"
+    },
+    "claude-champion-kit": {
+      "name": "Claude Champion Kit",
+      "tagline": "团队黑客松、答疑与 AI 提效推广套装",
+      "description": "7 项实用技能，帮助技术布道者组织黑客松、办公答疑与沉淀团队最佳实践。",
+      "category": "productivity",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "CK"
+    },
+    "claude-code-setup": {
+      "name": "Claude Code Setup",
+      "tagline": "代码库扫描与自动化配置一键推荐",
+      "description": "深入分析代码库结构并量身推荐 Hooks、Skills、MCP Server 与子智能体配置方案。",
+      "category": "coding",
+      "section": "for-you",
+      "featured": true,
+      "iconLabel": "CS"
+    },
+    "claude-for-manufacturing": {
+      "name": "Claude for Manufacturing",
+      "tagline": "17 项制造业产线数据整合与分析技能",
+      "description": "面向工厂制造场景的官方 17 项技能套件，整合多系统导出的生产与质量数据。",
+      "category": "data-analytics",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "MF"
+    },
+    "claude-md-management": {
+      "name": "CLAUDE.md Management",
+      "tagline": "CLAUDE.md 记忆质量审计与持续维护",
+      "description": "全面评估项目 `CLAUDE.md` 上下文质量、沉淀会话经验并保持工程记忆常新。",
+      "category": "productivity",
+      "section": "for-you",
+      "featured": true,
+      "iconLabel": "CM"
+    },
+    "claude-security": {
+      "name": "Claude Security Review",
+      "tagline": "Anthropic 官方深度代码漏洞安全扫描",
+      "description": "在本地仓库内按可调分析深度运行漏洞挖掘与安全审计，输出精准风险与修复建议。",
+      "category": "coding",
+      "section": "for-you",
+      "featured": true,
+      "iconLabel": "SR"
+    },
+    "claude-cwc-makers": {
+      "name": "Code-with-Claude Makers",
+      "tagline": "Cardputer 硬件工作坊一键初始化",
+      "description": "为 Code-with-Claude Makers 硬件创客提供一键环境搭建与固件示例引导技能。",
+      "category": "coding",
+      "section": "catalog",
+      "featured": false,
+      "iconLabel": "CW"
+    },
+    "claude-hookify": {
+      "name": "Claude Hookify",
+      "tagline": "从对话模式自动生成防误操作 Hooks",
+      "description": "分析会话中的常见偏航或重复纠正模式，快速生成拦截异常行为的工程 Hook 规则。",
+      "category": "automation",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "HK"
+    },
+    "claude-math-olympiad": {
+      "name": "Math Olympiad Verifier",
+      "tagline": "竞赛级数学难题对抗式严格证明",
+      "description": "面向 IMO、Putnam 等高难度竞赛数学，通过独立对抗验证揪出隐蔽推理漏洞。",
+      "category": "research",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "MO"
+    },
+    "claude-math-proof": {
+      "name": "Math Proof Suite",
+      "tagline": "高难数学定理双模式推演与 proof.md 输出",
+      "description": "提供单人深推与协作核验双技能工作流，最终输出逻辑严密、自洽完备的 `proof.md`。",
+      "category": "research",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "MP"
+    },
+    "claude-mcp-server-dev": {
+      "name": "MCP Server Dev Pack",
+      "tagline": "Anthropic 官方 MCP 服务端开发全套",
+      "description": "覆盖远程/本地部署模型、协议设计及认证规范的 3 项官方 MCP 服务端构建技能。",
+      "category": "coding",
+      "section": "for-you",
+      "featured": true,
+      "iconLabel": "MS"
+    },
+    "claude-playground": {
+      "name": "Claude Playground",
+      "tagline": "单文件交互式 HTML 探索器生成器",
+      "description": "将复杂概念或 Prompt 参数一键转化为带实时控件与预览的自包含单文件 HTML 游乐场。",
+      "category": "design",
+      "section": "for-you",
+      "featured": true,
+      "iconLabel": "PG"
+    },
+    "claude-plugin-dev": {
+      "name": "Claude Plugin Dev Toolkit",
+      "tagline": "7 项官方插件、Agent 与 Hook 开发套件",
+      "description": "涵盖 Agent、斜杠命令、Hooks、MCP 集成与全流程插件规范的 7 项官方开发工具包。",
+      "category": "coding",
+      "section": "for-you",
+      "featured": true,
+      "iconLabel": "PD"
+    },
+    "claude-project-artifact": {
+      "name": "Project Status Artifact",
+      "tagline": "多页签交互式项目状态看板生成与发布",
+      "description": "自动汇总项目目标、成功标准与进度拆解，生成分标签页的高颜值项目状态网页看板。",
+      "category": "documents",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "PA"
+    },
+    "claude-receipts": {
+      "name": "Claude Receipts",
+      "tagline": "个人 AI 研发效能与交付成果复盘报告",
+      "description": "自动梳理已交付项目、PR 贡献与编码产出，生成可用于自评或晋升述职的效能报告。",
+      "category": "productivity",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "RC"
+    },
+    "claude-session-report": {
+      "name": "Session Usage Report",
+      "tagline": "Token、缓存与技能调用交互式 HTML 报告",
+      "description": "将编程助手会话日志转化为可视化 HTML 账单分析页，清晰洞察缓存命中率与成本分布。",
+      "category": "data-analytics",
+      "section": "new",
+      "featured": false,
+      "iconLabel": "SU"
+    }
+  }
+}

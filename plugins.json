@@ -2891,6 +2891,322 @@
           }
         }
       ]
+    },
+    {
+      "slug": "markitdown-mcp",
+      "name": "MarkItDown MCP",
+      "tagline": "微软开源纯本地多格式文档转 Markdown 解析服务",
+      "description": "microsoft/markitdown 官方 MCP（MIT），纯本地将 Word、PPT、Excel、PDF 与 HTML 转为结构化 Markdown，零密钥免显卡。处理敏感文件时请保持关闭云端 Azure OCR。",
+      "category": "documents",
+      "creatorName": "microsoft",
+      "repository": "https://github.com/microsoft/markitdown",
+      "stars": 198100,
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-markitdown-mcp",
+          "name": "MarkItDown MCP",
+          "description": "通过 uvx 启动 markitdown-mcp 纯本地文档解析服务（stdio）。",
+          "server": {
+            "name": "markitdown",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "markitdown-mcp"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "excel-mcp-server",
+      "name": "Excel MCP Server",
+      "tagline": "纯本地 Excel 工作簿精编与 479 个内置公式引擎",
+      "description": "haris-musa/excel-mcp-server（MIT），无需本地安装 Excel，支持多页签写入、样式调整与 479 个公式验算。建议配合 --allow-dir 与 EXCEL_FILES_PATH 限定读写目录，默认禁用 VBA 宏写入。",
+      "category": "documents",
+      "creatorName": "haris-musa",
+      "repository": "https://github.com/haris-musa/excel-mcp-server",
+      "stars": 4300,
+      "featured": false,
+      "version": "2.3.3",
+      "apps": [
+        {
+          "id": "app-excel-mcp-server",
+          "name": "Excel MCP Server",
+          "description": "通过 uvx 启动 excel-mcp-server stdio 服务；可通过 EXCEL_FILES_PATH 或追加 --allow-dir 限定工作目录。",
+          "server": {
+            "name": "excel-mcp-server",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "excel-mcp-server",
+              "stdio"
+            ],
+            "env": [
+              {
+                "key": "EXCEL_FILES_PATH",
+                "value": "."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wenyan-mcp",
+      "name": "Wenyan 公众号排版 MCP",
+      "tagline": "Markdown 自动主题排版并推送至微信公众号官方草稿箱",
+      "description": "caol64/wenyan-mcp（Apache-2.0），通过微信公众平台官方草稿箱接口实现 Markdown 主题排版、代码高亮与草稿写入，不自动群发。需配置 AppID、AppSecret 与出口 IP 白名单。",
+      "category": "documents",
+      "creatorName": "caol64",
+      "repository": "https://github.com/caol64/wenyan-mcp",
+      "stars": 1400,
+      "featured": false,
+      "version": "2.0.4",
+      "apps": [
+        {
+          "id": "app-wenyan-mcp",
+          "name": "Wenyan 公众号排版 MCP",
+          "description": "通过 npx 启动 @wenyan-md/mcp（需配置微信公众号开发者凭据与 IP 白名单）。",
+          "server": {
+            "name": "wenyan-mcp",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "@wenyan-md/mcp"
+            ],
+            "auth": [
+              {
+                "id": "wechat-mp-credentials",
+                "kind": "key",
+                "label": "微信公众号开发者凭证",
+                "fields": [
+                  {
+                    "id": "app-id",
+                    "label": "AppID",
+                    "env": "WECHAT_APP_ID",
+                    "hint": "在微信公众平台 -> 设置与开发 -> 基本配置获取，并配置本机出口 IP 白名单"
+                  },
+                  {
+                    "id": "app-secret",
+                    "label": "AppSecret",
+                    "env": "WECHAT_APP_SECRET",
+                    "hint": "微信公众号开发者密码，仅用于官方草稿箱接口写入"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "paper-search-mcp",
+      "name": "Paper Search MCP",
+      "tagline": "多源英文学术文献检索与元数据提取（零密钥直连）",
+      "description": "openags/paper-search-mcp（MIT），免密钥直连检索 arXiv、OpenAlex、Crossref 与 PubMed 真实文献及 DOI 元数据。请保持 Sci-Hub 选项关闭并严防引文编造。",
+      "category": "research",
+      "creatorName": "openags",
+      "repository": "https://github.com/openags/paper-search-mcp",
+      "stars": 3100,
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-paper-search-mcp",
+          "name": "Paper Search MCP",
+          "description": "通过 uvx 启动 paper-search-mcp 本地英文文献检索服务（stdio）。",
+          "server": {
+            "name": "paper-search",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "paper-search-mcp"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "minimax-mcp",
+      "name": "MiniMax MCP",
+      "tagline": "MiniMax 官方大陆节点多模态生图、Hailuo 视频与配音服务",
+      "description": "MiniMax-AI/MiniMax-MCP（MIT），默认绑定大陆节点 https://api.minimaxi.com 与本地落盘模式，提供图片生成、Hailuo 视频与语音合成。音色克隆须获肖像授权且按量计费。",
+      "category": "design",
+      "creatorName": "MiniMax-AI",
+      "repository": "https://github.com/MiniMax-AI/MiniMax-MCP",
+      "stars": 1600,
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-minimax-mcp",
+          "name": "MiniMax MCP",
+          "description": "通过 uvx 启动 minimax-mcp（使用国内节点并将多模态产物落盘至本地）。",
+          "server": {
+            "name": "MiniMax",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "minimax-mcp",
+              "-y"
+            ],
+            "env": [
+              {
+                "key": "MINIMAX_API_HOST",
+                "value": "https://api.minimaxi.com"
+              },
+              {
+                "key": "MINIMAX_API_RESOURCE_MODE",
+                "value": "local"
+              }
+            ],
+            "auth": [
+              {
+                "id": "minimax-api-key",
+                "kind": "key",
+                "label": "MiniMax 开放平台 API Key",
+                "fields": [
+                  {
+                    "id": "api-key",
+                    "label": "MINIMAX_API_KEY",
+                    "env": "MINIMAX_API_KEY",
+                    "hint": "于 MiniMax 开放平台（api.minimaxi.com）控制台申请，视频与语音生成按量计费"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "powermcp",
+      "name": "PowerMCP",
+      "tagline": "哈佛 SEAS 开源电力系统潮流与 IEC 60909 短路计算 MCP",
+      "description": "Power-Agent/PowerMCP（MIT），封装 pandapower 与 PyPSA 执行纯 CPU 交流潮流、N-1 校验与 IEC 60909 短路电流计算。输出仅供方案初算参考，严禁代替注册电气工程师签章施工图。",
+      "category": "other",
+      "creatorName": "Power-Agent",
+      "repository": "https://github.com/Power-Agent/PowerMCP",
+      "stars": 239,
+      "featured": false,
+      "version": "0.5.1",
+      "apps": [
+        {
+          "id": "app-powermcp",
+          "name": "PowerMCP (pandapower)",
+          "description": "通过 uvx 启动 PowerMCP pandapower 电力网络计算服务（stdio）。",
+          "server": {
+            "name": "powermcp",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "--from",
+              "powermcp",
+              "powermcp",
+              "run",
+              "pandapower"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "platformio-mcp",
+      "name": "PlatformIO MCP",
+      "tagline": "嵌入式开发板发现、安全引脚审计与人工审批烧录服务",
+      "description": "jl-codes/platformio-mcp（MIT），面向 ESP32/STM32/Arduino 的编译诊断、GPIO 引脚防踩坑审计与串口监控工具，支持 flash_requires_approval 烧录人工确认策略。",
+      "category": "coding",
+      "creatorName": "jl-codes",
+      "repository": "https://github.com/jl-codes/platformio-mcp",
+      "stars": 56,
+      "featured": false,
+      "version": "3.1.0",
+      "apps": [
+        {
+          "id": "app-platformio-mcp",
+          "name": "PlatformIO MCP",
+          "description": "通过 npx 启动 platformio-mcp serve 本地嵌入式开发助手（stdio）。",
+          "server": {
+            "name": "platformio",
+            "transport": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "platformio-mcp",
+              "serve"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "docx-mcp",
+      "name": "DOCX Redline MCP",
+      "tagline": "纯本地 Word 原生修订追踪、段落批注与两版合同比对",
+      "description": "SecurityRonin/docx-mcp（MIT），无需安装 Microsoft Word 或 WPS，纯本地为 .docx 文档写入 OOXML 原生修订追踪、风险批注并比对前后版本差异，保障合同文本不出本机。",
+      "category": "documents",
+      "creatorName": "SecurityRonin",
+      "repository": "https://github.com/SecurityRonin/docx-mcp",
+      "stars": 70,
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-docx-mcp",
+          "name": "DOCX Redline MCP",
+          "description": "通过 uvx 启动 docx-mcp-server 纯本地 Word 红线批注服务（stdio）。",
+          "server": {
+            "name": "docx-mcp",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "docx-mcp-server"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "paddleocr-mcp",
+      "name": "PaddleOCR MCP",
+      "tagline": "百度飞桨官方纯 CPU 本地离线票据与文档 OCR 识别服务",
+      "description": "PaddlePaddle/PaddleOCR 官方内置 MCP（Apache-2.0），采用 PP-OCRv6 轻量模型从国内源下载并在普通办公本纯 CPU 离线运行，适用于发票、卡证与扫描件隐私识别。",
+      "category": "documents",
+      "creatorName": "PaddlePaddle",
+      "repository": "https://github.com/PaddlePaddle/PaddleOCR",
+      "stars": 92400,
+      "featured": false,
+      "version": "1.0.0",
+      "apps": [
+        {
+          "id": "app-paddleocr-mcp",
+          "name": "PaddleOCR MCP (Local CPU)",
+          "description": "通过 uvx 启动飞桨 PP-OCRv6 纯 CPU 离线识别服务（从国内源自动拉取轻量模型）。",
+          "server": {
+            "name": "paddleocr",
+            "transport": "stdio",
+            "command": "uvx",
+            "args": [
+              "--from",
+              "paddleocr-mcp[local-cpu]",
+              "paddleocr_mcp"
+            ],
+            "env": [
+              {
+                "key": "PADDLEOCR_MCP_MODEL",
+                "value": "PP-OCRv6"
+              },
+              {
+                "key": "PADDLEOCR_MCP_PPOCR_SOURCE",
+                "value": "local"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

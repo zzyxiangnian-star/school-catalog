@@ -5499,6 +5499,321 @@
         "commit": "85f39def06ab6022ea955162ddf636b34e3f45e8",
         "url": "https://github.com/NVIDIA/SkillEvaluator/tree/85f39def06ab6022ea955162ddf636b34e3f45e8/skills/skillevaluator"
       }
+    },
+    {
+      "id": "school-skill-cn-office-doc-suite",
+      "versionId": "school-skill-cn-office-doc-suite-v1-bfff8cf9263a",
+      "slug": "cn-office-doc-suite",
+      "name": "中文办公文档与公文精排流程",
+      "description": "串联 anthropics 官方文档技能与 markitdown-mcp、excel-mcp-server，为中文 Word 公文、汇报 PPT、公式型 Excel 与 PDF 提供全本地解析、规范生成与渲染复核。",
+      "tagline": "统一调度文档解析、中文公文规范、公式表格核验与版面转图自检",
+      "section": "new",
+      "category": "documents",
+      "icon": "skills/cn-office-doc-suite.icon.svg",
+      "bundle": "skills/cn-office-doc-suite.zip",
+      "bundleSha256": "bfff8cf9263a7bf514008231ee39f120c69fe8b8ff3b35893102a27de65c229b",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-cn-social-copywriter",
+      "versionId": "school-skill-cn-social-copywriter-v1-0f4a2cb0665c",
+      "slug": "cn-social-copywriter",
+      "name": "公众号与小红书全链路创作流程",
+      "description": "联动口吻润色技能与 wenyan-mcp、baoyu-skills 规范，产出适配微信公众号与小红书的多版本内容与视觉分镜，小红书默认仅导出本地图文包避免封号风险。",
+      "tagline": "提炼人设口吻、生成多版本文案配图、合规自检并安全写入草稿箱",
+      "section": "new",
+      "category": "documents",
+      "icon": "skills/cn-social-copywriter.icon.svg",
+      "bundle": "skills/cn-social-copywriter.zip",
+      "bundleSha256": "0f4a2cb0665c67f2b04e2e75ef73caee9aed12bb4e5add673ba0f9b84ff052c7",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-cn-thesis-and-defense",
+      "versionId": "school-skill-cn-thesis-and-defense-v1-2229032170c7",
+      "slug": "cn-thesis-and-defense",
+      "name": "中英文文献综述与 GB/T 7714 答辩流程",
+      "description": "结合 paper-search-mcp 与目录科研/PPT 技能，检索真实中英文论文构建文献矩阵、按 GB/T 7714-2015 格式化参考文献并生成精炼答辩展示文稿。",
+      "tagline": "并行检索真实文献、核验 GB/T 7714-2015 题录并生成答辩 PPT 骨架",
+      "section": "new",
+      "category": "research",
+      "icon": "skills/cn-thesis-and-defense.icon.svg",
+      "bundle": "skills/cn-thesis-and-defense.zip",
+      "bundleSha256": "2229032170c7ef2b45cb027573009b458b55daed4c1b3b65b0d5c0f692eb807d",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-cn-video-director-cut",
+      "versionId": "school-skill-cn-video-director-cut-v1-7c4d31601468",
+      "slug": "cn-video-director-cut",
+      "name": "全链路分镜配音与剪辑合成流程",
+      "description": "集成大陆直连 MiniMax MCP（生图/Hailuo视频/TTS）与 VectCutAPI/FFmpeg 本地剪辑链路，先定音画时长再拼装时间线，并在批量生成前核对预估费用。",
+      "tagline": "配音驱动镜头时长、生成多模态素材并导出剪映专业版草稿或 MP4",
+      "section": "catalog",
+      "category": "design",
+      "icon": "skills/cn-video-director-cut.icon.svg",
+      "bundle": "skills/cn-video-director-cut.zip",
+      "bundleSha256": "7c4d3160146885585ff37ac6b06faa2194a2cb903cb32d4c9eb51d3c119ebae3",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-hunyuan-blender-3d",
+      "versionId": "school-skill-hunyuan-blender-3d-v1-34f60199ca3c",
+      "slug": "hunyuan-blender-3d",
+      "name": "混元生 3D 与 Blender 修整流程",
+      "description": "打通国内直连的腾讯云混元生 3D API 与 mcp-for-blender，无需本地高显存 N 卡即可完成初模生成、单位毫米化、贴地齐平、网格修复及 STL/GLB 导出。",
+      "tagline": "云端文图生 3D 初模并联动 Blender MCP 完成缩放、补洞与多视角校验",
+      "section": "catalog",
+      "category": "design",
+      "icon": "skills/hunyuan-blender-3d.icon.svg",
+      "bundle": "skills/hunyuan-blender-3d.zip",
+      "bundleSha256": "34f60199ca3c01eb8c2b5505238bc1eb906a1ff4df9d52c0945e0fb04ce351b0",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-print3d-preflight-slicer",
+      "versionId": "school-skill-print3d-preflight-slicer-v1-98c85f6c0116",
+      "slug": "print3d-preflight-slicer",
+      "name": "3D 打印几何体检与切片方案流程",
+      "description": "纯本地 CPU 驱动 trimesh 执行尺寸核对、破洞修复、>45° 悬垂分析及 2 倍喷嘴薄壁预警，联动用户外置 OrcaSlicer 输出 .gcode.3mf（禁止自动物理下发打印）。",
+      "tagline": "基于 trimesh 检测水密性、薄壁与悬垂角，生成安全切片文件与参数报告",
+      "section": "catalog",
+      "category": "design",
+      "icon": "skills/print3d-preflight-slicer.icon.svg",
+      "bundle": "skills/print3d-preflight-slicer.zip",
+      "bundleSha256": "98c85f6c0116c554a8061fab0b4dcdd52231dd59fc21a049e84b8a401b7e9e3d",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-cn-electrical-power-calc",
+      "versionId": "school-skill-cn-electrical-power-calc-v1-938bd213da3a",
+      "slug": "cn-electrical-power-calc",
+      "name": "电力系统潮流与国标电气初算流程",
+      "description": "集成哈佛开源 PowerMCP，补齐 6/10/35/220kV 元件与 GB/T 12325、GB/T 15544.1 及 DL/T 5222 校验规则，输出含资质免责声明的强电初算计算书。",
+      "tagline": "基于 PowerMCP/pandapower 执行 50Hz 潮流、N-1 校验与短路电流核算",
+      "section": "catalog",
+      "category": "other",
+      "icon": "skills/cn-electrical-power-calc.icon.svg",
+      "bundle": "skills/cn-electrical-power-calc.zip",
+      "bundleSha256": "938bd213da3adbfd7f98410f6ecc61cac01db14c5981489059ebfe86e9074d0a",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-cn-mechanical-design-calc",
+      "versionId": "school-skill-cn-mechanical-design-calc-v1-a1d25a37b139",
+      "slug": "cn-mechanical-design-calc",
+      "name": "机械公差与零部件强度校核流程",
+      "description": "基于 BaratiLab 机械工程技能方法，驱动本地 Python pint、scipy 与 python-gearbox 执行物理量纲锁定计算与国标配合查表，附带特种设备合规免责声明。",
+      "tagline": "强制量纲计算，自动查表 GB/T 1800 公差、材料牌号、螺栓及齿轮强度",
+      "section": "catalog",
+      "category": "other",
+      "icon": "skills/cn-mechanical-design-calc.icon.svg",
+      "bundle": "skills/cn-mechanical-design-calc.zip",
+      "bundleSha256": "a1d25a37b1397082b53d590aac31ef5cc21dcee70900a199b56caeac365d36e9",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-freecad-calculix-fea",
+      "versionId": "school-skill-freecad-calculix-fea-v1-d85724853574",
+      "slug": "freecad-calculix-fea",
+      "name": "FreeCAD 有限元分析与选面校核流程",
+      "description": "通过 freecad-mcp 驱动本地 FreeCAD 1.1+（内置 Gmsh 与 CalculiX），实现人机交互确认约束加载面、二阶四面体网格划分与应力云图截取。",
+      "tagline": "引导闭合 STEP 模型导入、面确认约束加载、Gmsh 网格划分与 CalculiX 求解",
+      "section": "catalog",
+      "category": "design",
+      "icon": "skills/freecad-calculix-fea.icon.svg",
+      "bundle": "skills/freecad-calculix-fea.zip",
+      "bundleSha256": "d85724853574877cd5e7c461a04486e83002dd3e2329ec80a0983148fb1b2c8a",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-mcu-platformio-prototype",
+      "versionId": "school-skill-mcu-platformio-prototype-v1-f1abc9f48c21",
+      "slug": "mcu-platformio-prototype",
+      "name": "嵌入式硬件安全引脚与固件调试流程",
+      "description": "集成 platformio-mcp 执行板级发现、安全引脚审计、自动化编译诊断与串口日志监测，严格锁定 flash_requires_approval 烧录确认闸门防硬件烧毁。",
+      "tagline": "执行电平预算核查、Strapping 引脚排雷、编译诊断及人工审批安全烧录",
+      "section": "catalog",
+      "category": "coding",
+      "icon": "skills/mcu-platformio-prototype.icon.svg",
+      "bundle": "skills/mcu-platformio-prototype.zip",
+      "bundleSha256": "f1abc9f48c21f804c5f846756080b5e2fc942cf2538d5e24f0be3db937c8960f",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-laser-cnc-dxf-nesting",
+      "versionId": "school-skill-laser-cnc-dxf-nesting-v1-81c120a0c6c0",
+      "slug": "laser-cnc-dxf-nesting",
+      "name": "激光切割与 CNC 排版安全流程",
+      "description": "全本地 CPU 联动 Inkscape、ezdxf 与 Rust 内核 spyrrow，完成闭合与重线清理、内外轮廓分层、异形省料排版及路径工时估算，严防有毒材质切割。",
+      "tagline": "本地矢量转 DXF 除重线分层，运行 spyrrow 异形排版并输出禁切物料黑名单",
+      "section": "catalog",
+      "category": "design",
+      "icon": "skills/laser-cnc-dxf-nesting.icon.svg",
+      "bundle": "skills/laser-cnc-dxf-nesting.zip",
+      "bundleSha256": "81c120a0c6c0e26ebbcbff3f947cf3f7303005dca3a8b928ac91b60c879f98c3",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-contract-review-cn",
+      "versionId": "school-skill-contract-review-cn-v1-bec6219c970d",
+      "slug": "contract-review-cn",
+      "name": "中国大陆商业合同本地审阅流程",
+      "description": "集成 legal 技能、markitdown-mcp 与 docx-mcp，全程离线解析合同正文，执行数值逻辑校验与甲乙双方立场审查，可另存生成带 Word 原生批注副本。",
+      "tagline": "交叉核对主体金额比例、逐句引据排查失衡条款并支持写入 Word 批注",
+      "section": "new",
+      "category": "documents",
+      "icon": "skills/contract-review-cn.icon.svg",
+      "bundle": "skills/contract-review-cn.zip",
+      "bundleSha256": "bec6219c970d0ddadf2479b548b0f602868cdefac5e2ca48bb0acc32ce2fe6c0",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-invoice-reimbursement-cn",
+      "versionId": "school-skill-invoice-reimbursement-cn-v1-7b4a4dbb9657",
+      "slug": "invoice-reimbursement-cn",
+      "name": "中国大陆发票报销识别与查重流程",
+      "description": "组合飞桨本地离线 PaddleOCR MCP 与 excel-mcp-server，优先无损读取电子票 PDF/OFD，精准/模糊双维度查重并生成带动态 SUM 公式的报销工作簿。",
+      "tagline": "PP-OCRv6 纯 CPU 离线提字段、严校税号价税、精准模糊查重并生成公式表",
+      "section": "new",
+      "category": "data-analytics",
+      "icon": "skills/invoice-reimbursement-cn.icon.svg",
+      "bundle": "skills/invoice-reimbursement-cn.zip",
+      "bundleSha256": "7b4a4dbb9657304d18c6d354c7a87600e39e9166725a1a807ddf71b1814463d9",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-meeting-and-chat-minutes",
+      "versionId": "school-skill-meeting-and-chat-minutes-v1-c1575d618581",
+      "slug": "meeting-and-chat-minutes",
+      "name": "合规会议转写与群聊纪要流程",
+      "description": "复用目录会议待办提取技能，结合本机 FunASR 语音分轨与钉钉开放平台 MCP，严格规避个人微信 Hook 封号红线，只接收主动粘贴或合法导出的群聊文本。",
+      "tagline": "本地 FunASR 转写分轨、清洗群聊文本提取决议与待办表并按需对接钉钉",
+      "section": "catalog",
+      "category": "productivity",
+      "icon": "skills/meeting-and-chat-minutes.icon.svg",
+      "bundle": "skills/meeting-and-chat-minutes.zip",
+      "bundleSha256": "c1575d6185819490db84567e60f0ea375f8c3c6fcbf698556386c2df1db5ab8d",
+      "version": 1,
+      "featured": false,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
+    },
+    {
+      "id": "school-skill-cn-job-coach",
+      "versionId": "school-skill-cn-job-coach-v1-58f4a104556c",
+      "slug": "cn-job-coach",
+      "name": "隐私保护简历改写与模拟面试流程",
+      "description": "配合 markitdown-mcp、RenderCV（内置 Typst）与 docx 技能，全程本地隐私运行，完成 JD 匹配诊断、实事求是 STAR 改写、1~2 页 PDF/Word 导出及多轮模拟面试。",
+      "tagline": "不失真 STAR 重构简历、RenderCV 免 LaTeX 出 PDF 并开展多轮面试追问",
+      "section": "new",
+      "category": "productivity",
+      "icon": "skills/cn-job-coach.icon.svg",
+      "bundle": "skills/cn-job-coach.zip",
+      "bundleSha256": "58f4a104556cf0b023ebf475fc8a8352028d31a23dbba5683232b89b5fd3645e",
+      "version": 1,
+      "featured": true,
+      "files": [
+        "SKILL.md",
+        "references/stack-and-sop.md"
+      ],
+      "creatorName": "school",
+      "license": "MIT"
     }
   ]
 }
